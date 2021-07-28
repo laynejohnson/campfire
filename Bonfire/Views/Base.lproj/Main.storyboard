@@ -34,15 +34,15 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-2o-Dxk" userLabel="Button Stack View">
-                                <rect key="frame" x="170" y="680" width="74" height="82"/>
+                                <rect key="frame" x="181" y="680" width="52" height="82"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRH-MR-ViA">
-                                        <rect key="frame" x="0.0" y="0.0" width="74" height="36"/>
+                                        <rect key="frame" x="6" y="0.0" width="40" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                                        <state key="normal" title="Sign Up"/>
+                                        <state key="normal" title="Join"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-zL-dJS">
-                                        <rect key="frame" x="11" y="46" width="52" height="36"/>
+                                        <rect key="frame" x="0.0" y="46" width="52" height="36"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Login"/>
                                     </button>
@@ -63,8 +63,8 @@
                     <connections>
                         <outlet property="bonfireImage" destination="36N-Vf-Lsk" id="2AP-dC-oFW"/>
                         <outlet property="bonfireLabel" destination="cTW-Bt-uFN" id="4Gg-CF-tna"/>
+                        <outlet property="joinButton" destination="CRH-MR-ViA" id="ore-tF-evo"/>
                         <outlet property="loginButton" destination="KRA-zL-dJS" id="Z6v-1z-PMD"/>
-                        <outlet property="signUpButton" destination="CRH-MR-ViA" id="ore-tF-evo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -78,9 +78,49 @@
                     <view key="view" contentMode="scaleToFill" id="4qW-i9-KRi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-eL-Hid">
+                                <rect key="frame" x="20" y="409" width="374" height="78"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izr-uF-MoE" userLabel="Email Field">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-la-TQI" userLabel="Password Field">
+                                        <rect key="frame" x="0.0" y="44" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="izr-uF-MoE" secondAttribute="trailing" id="9SU-7R-3Oc"/>
+                                    <constraint firstAttribute="trailing" secondItem="f1w-la-TQI" secondAttribute="trailing" id="CR2-W7-o9R"/>
+                                    <constraint firstItem="izr-uF-MoE" firstAttribute="leading" secondItem="l3X-eL-Hid" secondAttribute="leading" id="HAs-1f-dqD"/>
+                                    <constraint firstItem="f1w-la-TQI" firstAttribute="leading" secondItem="l3X-eL-Hid" secondAttribute="leading" id="lDz-MW-x4v"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-ne-fCH">
+                                <rect key="frame" x="130.5" y="525" width="153" height="30"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                                <state key="normal" title="Grab a set by the fire"/>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Ohq-zz-5bp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zK6-ne-fCH" firstAttribute="top" secondItem="l3X-eL-Hid" secondAttribute="bottom" constant="38" id="9Ak-So-ZaB"/>
+                            <constraint firstItem="zK6-ne-fCH" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="Hj6-xH-yw8"/>
+                            <constraint firstItem="l3X-eL-Hid" firstAttribute="leading" secondItem="Ohq-zz-5bp" secondAttribute="leading" constant="20" id="a25-us-DPg"/>
+                            <constraint firstItem="l3X-eL-Hid" firstAttribute="centerY" secondItem="4qW-i9-KRi" secondAttribute="centerY" id="rGK-nS-ncH"/>
+                            <constraint firstItem="Ohq-zz-5bp" firstAttribute="trailing" secondItem="l3X-eL-Hid" secondAttribute="trailing" constant="20" id="sYs-oo-nUo"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailField" destination="izr-uF-MoE" id="tSD-Ib-Q3k"/>
+                        <outlet property="grabButton" destination="zK6-ne-fCH" id="md1-4z-MqT"/>
+                        <outlet property="passwordField" destination="f1w-la-TQI" id="PRT-JN-yXL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrD-uy-8yn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

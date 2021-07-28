@@ -23,7 +23,7 @@ class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var bonfireImage: UIImageView!
     @IBOutlet weak var bonfireLabel: UILabel!
-    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     
     // MARK: - Variables

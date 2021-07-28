@@ -7,8 +7,14 @@
 
 import UIKit
 
+ // TODO: Add username pop-up
+
 class RegisterViewController: UIViewController {
 
+    @IBOutlet weak var emailField: UITextField!
+    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var grabButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
