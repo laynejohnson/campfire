@@ -134,14 +134,13 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usb-lo-SpW">
-                                <rect key="frame" x="184" y="519" width="52" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usb-lo-SpW">
+                                <rect key="frame" x="181" y="527.5" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Login"/>
                             </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Fc-r2N">
-                                <rect key="frame" x="20" y="414" width="374" height="83"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Fc-r2N">
+                                <rect key="frame" x="20" y="406.5" width="374" height="83"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-0E-nnl">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
@@ -165,7 +164,11 @@
                         <viewLayoutGuide key="safeArea" id="6Tb-WJ-ZjN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="zBm-Fc-r2N" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="4kr-HE-3xg"/>
+                            <constraint firstItem="Usb-lo-SpW" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="PYK-K0-VEe"/>
+                            <constraint firstItem="Usb-lo-SpW" firstAttribute="top" secondItem="zBm-Fc-r2N" secondAttribute="bottom" constant="38" id="TPz-ut-NOU"/>
                             <constraint firstItem="zBm-Fc-r2N" firstAttribute="leading" secondItem="6Tb-WJ-ZjN" secondAttribute="leading" constant="20" id="bz1-gD-lvJ"/>
+                            <constraint firstItem="zBm-Fc-r2N" firstAttribute="centerY" secondItem="e1y-tv-lV5" secondAttribute="centerY" id="gm0-Sh-1Ix"/>
                             <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="trailing" secondItem="zBm-Fc-r2N" secondAttribute="trailing" constant="20" id="oea-re-xgv"/>
                         </constraints>
                     </view>
