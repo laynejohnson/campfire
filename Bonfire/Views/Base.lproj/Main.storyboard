@@ -11,7 +11,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Welcome View Controller" customClass="ViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -60,6 +60,12 @@
                             <constraint firstItem="wsD-2o-Dxk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xbP-tG-t1U"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="bonfireImage" destination="36N-Vf-Lsk" id="2AP-dC-oFW"/>
+                        <outlet property="bonfireLabel" destination="cTW-Bt-uFN" id="4Gg-CF-tna"/>
+                        <outlet property="loginButton" destination="KRA-zL-dJS" id="Z6v-1z-PMD"/>
+                        <outlet property="signUpButton" destination="CRH-MR-ViA" id="ore-tF-evo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -68,7 +74,7 @@
         <!--Register View Controller-->
         <scene sceneID="0Zb-ur-8eZ">
             <objects>
-                <viewController id="O2o-Bf-k5F" userLabel="Register View Controller" sceneMemberID="viewController">
+                <viewController id="O2o-Bf-k5F" userLabel="Register View Controller" customClass="RegisterViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qW-i9-KRi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +89,7 @@
         <!--Login View Controller-->
         <scene sceneID="BRK-y4-dwi">
             <objects>
-                <viewController id="932-yJ-Eof" userLabel="Login View Controller" sceneMemberID="viewController">
+                <viewController id="932-yJ-Eof" userLabel="Login View Controller" customClass="LoginViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1y-tv-lV5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -98,7 +104,7 @@
         <!--Chat View Controller-->
         <scene sceneID="pQz-cR-eoW">
             <objects>
-                <viewController id="svR-Mr-HdG" userLabel="Chat View Controller" sceneMemberID="viewController">
+                <viewController id="svR-Mr-HdG" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Stl-os-ITs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
