@@ -28,6 +28,7 @@ class JoinViewController: UIViewController {
         if let email = emailField.text, let password = passwordField.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
+                    print(e.localizedDescription)
                     // localizedDescription prints error in host language
                     self.messageLabel.text = e.localizedDescription
                 } else {
