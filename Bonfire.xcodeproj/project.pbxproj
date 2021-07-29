@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		D6C1A4D659262FA84148AA63 /* Pods_Bonfire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27880E8E599533E33318CF6F /* Pods_Bonfire.framework */; };
 		E8A99FD226B2E950005F85EA /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A99FD126B2E950005F85EA /* Access.swift */; };
-		E8A99FD426B3002F005F85EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A99FD326B3002F005F85EA /* GoogleService-Info.plist */; };
 		E8CDC99826B196B2004518D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99726B196B2004518D0 /* AppDelegate.swift */; };
 		E8CDC99A26B196B2004518D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99926B196B2004518D0 /* SceneDelegate.swift */; };
 		E8CDC99C26B196B2004518D0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99B26B196B2004518D0 /* WelcomeViewController.swift */; };
@@ -26,7 +25,6 @@
 		27880E8E599533E33318CF6F /* Pods_Bonfire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonfire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C29F36B9287DD4C1EB24C0 /* Pods-Bonfire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonfire.debug.xcconfig"; path = "Target Support Files/Pods-Bonfire/Pods-Bonfire.debug.xcconfig"; sourceTree = "<group>"; };
 		E8A99FD126B2E950005F85EA /* Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
-		E8A99FD326B3002F005F85EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8CDC99426B196B2004518D0 /* Bonfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CDC99726B196B2004518D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8CDC99926B196B2004518D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,7 +97,6 @@
 				E8CDC9A026B196B3004518D0 /* Assets.xcassets */,
 				E8CDC9A226B196B3004518D0 /* LaunchScreen.storyboard */,
 				E8CDC9A526B196B3004518D0 /* Info.plist */,
-				E8A99FD326B3002F005F85EA /* GoogleService-Info.plist */,
 			);
 			path = Bonfire;
 			sourceTree = "<group>";
@@ -190,7 +187,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				E8CDC9A426B196B3004518D0 /* LaunchScreen.storyboard in Resources */,
-				E8A99FD426B3002F005F85EA /* GoogleService-Info.plist in Resources */,
 				E8CDC9A126B196B3004518D0 /* Assets.xcassets in Resources */,
 				E8CDC99F26B196B2004518D0 /* Main.storyboard in Resources */,
 			);

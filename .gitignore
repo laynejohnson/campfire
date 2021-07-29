@@ -136,3 +136,4 @@ Dependencies/
 ### Firebase Patch ###
 .runtimeconfig.json
 .firebase/
+*GoogleService-Info.plist
