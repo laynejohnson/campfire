@@ -22,7 +22,7 @@ class LoginViewController: UIViewController {
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
-        performSegue(withIdentifier: "login", sender: self)
+        performSegue(withIdentifier: "LoginChat", sender: self)
     }
     
 

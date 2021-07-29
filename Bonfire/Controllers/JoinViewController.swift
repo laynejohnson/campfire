@@ -6,14 +6,16 @@
 //  Copyright © 2021. All rights reserved.
 
 import UIKit
+import Firebase
 
  // TODO: Add username pop-up
 
-class RegisterViewController: UIViewController {
+class JoinViewController: UIViewController {
 
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
+    @IBOutlet weak var messageLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,8 +25,16 @@ class RegisterViewController: UIViewController {
     
     @IBAction func joinPressed(_ sender: UIButton) {
         
-         performSegue(withIdentifier: "join", sender: self)
-        
+        if let email = emailField.text, let password = passwordField.text {
+            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                if let e = error {
+                    // localizedDescription prints error in host language
+                    self.messageLabel.text = e.localizedDescription
+                } else {
+                    self.performSegue(withIdentifier: "JoinChat", sender: self)
+                }
+            }
+        }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
