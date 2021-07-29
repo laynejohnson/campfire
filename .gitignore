@@ -123,3 +123,5 @@ Dependencies/
 !*.xcodeproj/xcshareddata/
 !*.xcworkspace/contents.xcworkspacedata
 **/xcshareddata/WorkspaceSettings.xcsettings
+
+*Constants.swift
