@@ -7,6 +7,8 @@
 
 import UIKit
 
+ // TODO: Implement MessageKit: https://cocoapods.org/pods/MessageKit
+
 class ChatViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
