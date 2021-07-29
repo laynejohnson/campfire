@@ -6,7 +6,7 @@ target 'Bonfire' do
 
   # Pods for Bonfire
   
-  pod 'MessageKit', '~> 3.6'
+#  pod 'MessageKit', '~> 3.6'
 
   # Firebase:
   # https://firebase.google.com/docs/ios/setup#available-pods
