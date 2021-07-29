@@ -42,6 +42,9 @@
                                         <state key="normal" title="Join">
                                             <color key="titleColor" red="0.99215686270000003" green="0.1450980392" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="O2o-Bf-k5F" kind="show" id="JOz-hS-l2x"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-zL-dJS">
                                         <rect key="frame" x="0.0" y="46" width="52" height="36"/>
@@ -49,6 +52,9 @@
                                         <state key="normal" title="Login">
                                             <color key="titleColor" red="0.99215686270000003" green="0.1450980392" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
+                                        <connections>
+                                            <segue destination="932-yJ-Eof" kind="show" id="8VX-km-pce"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -80,11 +86,11 @@
             <objects>
                 <viewController id="O2o-Bf-k5F" userLabel="Register View Controller" customClass="RegisterViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qW-i9-KRi">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-eL-Hid">
-                                <rect key="frame" x="20" y="390.5" width="374" height="115"/>
+                                <rect key="frame" x="20" y="363.5" width="374" height="115"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="izr-uF-MoE" userLabel="Email Field">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -111,7 +117,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-ne-fCH">
-                                <rect key="frame" x="187" y="543.5" width="40" height="36"/>
+                                <rect key="frame" x="187" y="516.5" width="40" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Join">
                                     <color key="titleColor" red="0.99215686270000003" green="0.1450980392" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -131,6 +137,7 @@
                             <constraint firstItem="Ohq-zz-5bp" firstAttribute="trailing" secondItem="l3X-eL-Hid" secondAttribute="trailing" constant="20" id="sYs-oo-nUo"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Oqq-fI-n6i"/>
                     <connections>
                         <outlet property="emailField" destination="izr-uF-MoE" id="tSD-Ib-Q3k"/>
                         <outlet property="joinButton" destination="zK6-ne-fCH" id="md1-4z-MqT"/>
@@ -147,11 +154,11 @@
             <objects>
                 <viewController id="932-yJ-Eof" userLabel="Login View Controller" customClass="LoginViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1y-tv-lV5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usb-lo-SpW">
-                                <rect key="frame" x="181" y="543.5" width="52" height="36"/>
+                                <rect key="frame" x="181" y="516.5" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99215686270000003" green="0.1450980392" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
@@ -161,7 +168,7 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Fc-r2N">
-                                <rect key="frame" x="20" y="390.5" width="374" height="115"/>
+                                <rect key="frame" x="20" y="363.5" width="374" height="115"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-0E-nnl">
                                         <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
@@ -199,6 +206,7 @@
                             <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="trailing" secondItem="zBm-Fc-r2N" secondAttribute="trailing" constant="20" id="oea-re-xgv"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="ObK-fu-6fZ"/>
                     <connections>
                         <outlet property="emailField" destination="Mcn-0E-nnl" id="XDD-Uq-J0X"/>
                         <outlet property="loginButton" destination="Usb-lo-SpW" id="Fhx-nT-kCj"/>
