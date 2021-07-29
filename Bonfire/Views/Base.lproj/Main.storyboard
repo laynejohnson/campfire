@@ -135,7 +135,7 @@
                         <outlet property="emailField" destination="izr-uF-MoE" id="tSD-Ib-Q3k"/>
                         <outlet property="joinButton" destination="zK6-ne-fCH" id="md1-4z-MqT"/>
                         <outlet property="passwordField" destination="f1w-la-TQI" id="PRT-JN-yXL"/>
-                        <segue destination="svR-Mr-HdG" kind="show" identifier="joins" id="DGC-cf-qpa"/>
+                        <segue destination="svR-Mr-HdG" kind="show" identifier="join" id="DGC-cf-qpa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrD-uy-8yn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -156,6 +156,9 @@
                                 <state key="normal" title="Login">
                                     <color key="titleColor" red="0.99215686270000003" green="0.1450980392" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="932-yJ-Eof" eventType="touchUpInside" id="oZK-E3-TXJ"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Fc-r2N">
                                 <rect key="frame" x="20" y="390.5" width="374" height="115"/>
@@ -200,6 +203,7 @@
                         <outlet property="emailField" destination="Mcn-0E-nnl" id="XDD-Uq-J0X"/>
                         <outlet property="loginButton" destination="Usb-lo-SpW" id="Fhx-nT-kCj"/>
                         <outlet property="passwordField" destination="Xc6-rF-R6m" id="HYr-Jt-GiJ"/>
+                        <segue destination="svR-Mr-HdG" kind="show" identifier="login" id="FHS-J3-Um3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pc-f9-Ggg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,6 +289,9 @@
             <point key="canvasLocation" x="1662" y="461"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="DGC-cf-qpa"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="noun_bonfire_1739944" width="100" height="100"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>

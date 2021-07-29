@@ -23,7 +23,7 @@ class RegisterViewController: UIViewController {
     
     @IBAction func joinPressed(_ sender: UIButton) {
         
-         performSegue(withIdentifier: "joins", sender: self)
+         performSegue(withIdentifier: "join", sender: self)
         
     }
     
