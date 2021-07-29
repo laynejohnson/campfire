@@ -9,6 +9,8 @@ import UIKit
 import Firebase
 
  // TODO: Add username pop-up
+ // TODO: Fix text alignment; move to lower screen
+ // TODO: Dismiss keyboard if error
 
 class JoinViewController: UIViewController {
 
@@ -20,7 +22,7 @@ class JoinViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        messageLabel.text = ""
     }
     
     @IBAction func joinPressed(_ sender: UIButton) {
