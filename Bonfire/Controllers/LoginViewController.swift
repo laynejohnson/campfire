@@ -13,16 +13,15 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var guideMessage: UILabel!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
-        
-        
+        guideMessage.text = ""
+       
     }
-    
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
@@ -39,9 +38,7 @@ class LoginViewController: UIViewController {
                     self?.performSegue(withIdentifier: "LoginChat", sender: self)
                 }
             }
-            
         }
-        
     }
     
     
