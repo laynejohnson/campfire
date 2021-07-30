@@ -41,6 +41,10 @@
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="KRA-zL-dJS" firstAttribute="centerX" secondItem="wsD-2o-Dxk" secondAttribute="centerX" id="tNV-rQ-7qh"/>
+                                    <constraint firstItem="CRH-MR-ViA" firstAttribute="centerX" secondItem="wsD-2o-Dxk" secondAttribute="centerX" id="wt3-Qh-bqK"/>
+                                </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bonfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="36N-Vf-Lsk">
                                 <rect key="frame" x="119" y="312.5" width="176" height="271"/>
@@ -223,7 +227,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Fc-r2N" userLabel="Field Stack View">
                                         <rect key="frame" x="0.0" y="307" width="414" height="135"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-0E-nnl">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hello@bonfire.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-0E-nnl">
                                                 <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -238,7 +242,7 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xc6-rF-R6m">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xc6-rF-R6m">
                                                 <rect key="frame" x="0.0" y="75" width="414" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -385,7 +389,13 @@
                             <constraint firstItem="4RO-Sv-GZ3" firstAttribute="trailing" secondItem="c7m-wD-gmb" secondAttribute="trailing" id="lD4-yR-t8w"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qtz-by-4gl"/>
+                    <navigationItem key="navigationItem" id="qtz-by-4gl">
+                        <barButtonItem key="rightBarButtonItem" title="Logout" id="I0A-jZ-dta">
+                            <connections>
+                                <action selector="logOutPressed:" destination="svR-Mr-HdG" id="NkA-qN-bKt"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="messageTextField" destination="WWe-Qy-L2r" id="uD7-cw-ufl"/>
                         <outlet property="sendButton" destination="5tB-tX-7gX" id="W66-pk-Oak"/>
@@ -416,7 +426,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FHS-J3-Um3"/>
+        <segue reference="DGC-cf-qpa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bonfire_logo" width="176" height="271"/>
