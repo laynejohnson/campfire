@@ -14,6 +14,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,6 +33,7 @@ class LoginViewController: UIViewController {
                 
                 if let e = error {
                     print(e.localizedDescription)
+                    
                 } else {
                     print("User logged in successfuly.")
                     self?.performSegue(withIdentifier: "LoginChat", sender: self)

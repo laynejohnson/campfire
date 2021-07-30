@@ -11,6 +11,7 @@ import Firebase
  // TODO: Add username pop-up
  // TODO: Fix text alignment; move to lower screen
  // TODO: Dismiss keyboard if error
+ // TODO: Add ember animation
 
 class JoinViewController: UIViewController {
 
