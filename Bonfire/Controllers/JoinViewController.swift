@@ -18,12 +18,12 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
-    @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var guideLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        messageLabel.text = ""
+        guideLabel.text = ""
     }
     
     @IBAction func joinPressed(_ sender: UIButton) {
@@ -33,7 +33,7 @@ class JoinViewController: UIViewController {
                 if let e = error {
                     print(e.localizedDescription)
                     // localizedDescription prints error in host language
-                    self.messageLabel.text = e.localizedDescription
+                    self.guideLabel.text = e.localizedDescription
                 } else {
                     self.performSegue(withIdentifier: "JoinChat", sender: self)
                 }
