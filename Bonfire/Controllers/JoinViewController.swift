@@ -1,5 +1,5 @@
 //
-//  RegisterViewController.swift
+//  JoinViewController.swift
 //  Bonfire
 //
 //  Created by Layne Johnson on 7/28/21.
@@ -24,6 +24,11 @@ class JoinViewController: UIViewController {
         super.viewDidLoad()
 
         guideLabel.text = ""
+        
+        // Dismiss keyboard with tap gesture
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
+        
     }
     
     @IBAction func joinPressed(_ sender: UIButton) {

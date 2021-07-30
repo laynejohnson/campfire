@@ -8,6 +8,8 @@
 import UIKit
 import Firebase
 
+ // TODO: Debug field stack view
+
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!
@@ -20,6 +22,10 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         guideMessage.text = ""
+        
+        // Dismiss keyboard with tap gesture
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
        
     }
     
