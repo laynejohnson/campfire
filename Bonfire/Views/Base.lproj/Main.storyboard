@@ -237,10 +237,8 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="Xc6-rF-R6m" firstAttribute="leading" secondItem="zBm-Fc-r2N" secondAttribute="leading" constant="30" id="8Sp-6r-bCT"/>
                                             <constraint firstItem="Mcn-0E-nnl" firstAttribute="leading" secondItem="zBm-Fc-r2N" secondAttribute="leading" constant="30" id="FEc-e5-JIh"/>
                                             <constraint firstAttribute="trailing" secondItem="Mcn-0E-nnl" secondAttribute="trailing" constant="30" id="Y19-zp-QS4"/>
-                                            <constraint firstAttribute="trailing" secondItem="Xc6-rF-R6m" secondAttribute="trailing" constant="30" id="eC4-Nk-riR"/>
                                         </constraints>
                                     </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Epk-yL-PvA" userLabel="Button/Message View">
