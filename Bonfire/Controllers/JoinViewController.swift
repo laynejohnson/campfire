@@ -29,6 +29,9 @@ class JoinViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
         
+        // If gesture blocks other touches
+//        tapGesture.cancelsTouchesInView = false
+        
     }
     
     @IBAction func joinPressed(_ sender: UIButton) {

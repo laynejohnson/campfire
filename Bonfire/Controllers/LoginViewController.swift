@@ -26,6 +26,9 @@ class LoginViewController: UIViewController {
         // Dismiss keyboard with tap gesture
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
+        
+        // If gesture blocks other touches
+//        tapGesture.cancelsTouchesInView = false
        
     }
     
@@ -33,15 +36,15 @@ class LoginViewController: UIViewController {
         
         if let email = emailField.text, let password = passwordField.text {
             
-            Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
-                guard let strongSelf = self else { return }
+            Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
+                // User account data lives in authResult
                 
                 if let e = error {
                     print(e.localizedDescription)
-                    
+                    self.guideMessage.text = String(e.localizedDescription)
                 } else {
                     print("User logged in successfuly.")
-                    self?.performSegue(withIdentifier: "LoginChat", sender: self)
+                    self.performSegue(withIdentifier: "LoginChat", sender: self)
                 }
             }
         }
