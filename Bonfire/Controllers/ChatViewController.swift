@@ -8,6 +8,17 @@
 import UIKit
 
  // TODO: Implement MessageKit: https://cocoapods.org/pods/MessageKit
+ // TODO: Implement signout
+
+/*
+    let firebaseAuth = Auth.auth()
+ do {
+   try firebaseAuth.signOut()
+ } catch let signOutError as NSError {
+   print("Error signing out: %@", signOutError)
+ }
+ 
+   */
 
 class ChatViewController: UIViewController {
 
