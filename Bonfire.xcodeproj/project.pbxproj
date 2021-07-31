@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		D6C1A4D659262FA84148AA63 /* Pods_Bonfire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27880E8E599533E33318CF6F /* Pods_Bonfire.framework */; };
-		E801124726B5906600D0BE4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E801124626B5906600D0BE4B /* Constants.swift */; };
+		E801124726B5906600D0BE4B /* K.swift in Sources */ = {isa = PBXBuildFile; fileRef = E801124626B5906600D0BE4B /* K.swift */; };
 		E8A99FD226B2E950005F85EA /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A99FD126B2E950005F85EA /* Access.swift */; };
 		E8A99FD626B30882005F85EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A99FD526B30882005F85EA /* GoogleService-Info.plist */; };
 		E8CDC99826B196B2004518D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99726B196B2004518D0 /* AppDelegate.swift */; };
@@ -26,7 +26,7 @@
 		1B542C7A11B023BEF289360A /* Pods-Bonfire.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonfire.release.xcconfig"; path = "Target Support Files/Pods-Bonfire/Pods-Bonfire.release.xcconfig"; sourceTree = "<group>"; };
 		27880E8E599533E33318CF6F /* Pods_Bonfire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bonfire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		30C29F36B9287DD4C1EB24C0 /* Pods-Bonfire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bonfire.debug.xcconfig"; path = "Target Support Files/Pods-Bonfire/Pods-Bonfire.debug.xcconfig"; sourceTree = "<group>"; };
-		E801124626B5906600D0BE4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		E801124626B5906600D0BE4B /* K.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = K.swift; sourceTree = "<group>"; };
 		E8A99FD126B2E950005F85EA /* Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
 		E8A99FD526B30882005F85EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8CDC99426B196B2004518D0 /* Bonfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Bonfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -95,7 +95,7 @@
 				E8CDC99726B196B2004518D0 /* AppDelegate.swift */,
 				E8CDC99926B196B2004518D0 /* SceneDelegate.swift */,
 				E8A99FD126B2E950005F85EA /* Access.swift */,
-				E801124626B5906600D0BE4B /* Constants.swift */,
+				E801124626B5906600D0BE4B /* K.swift */,
 				E8CDC9AB26B19A1C004518D0 /* Models */,
 				E8CDC9AC26B19A22004518D0 /* Views */,
 				E8CDC9AD26B19A27004518D0 /* Controllers */,
@@ -255,7 +255,7 @@
 				E8CDC9B126B19C0B004518D0 /* LoginViewController.swift in Sources */,
 				E8CDC9B326B19C1C004518D0 /* ChatViewController.swift in Sources */,
 				E8CDC9AF26B19BCD004518D0 /* JoinViewController.swift in Sources */,
-				E801124726B5906600D0BE4B /* Constants.swift in Sources */,
+				E801124726B5906600D0BE4B /* K.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

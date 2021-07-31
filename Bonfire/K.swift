@@ -14,8 +14,8 @@ import Foundation
  
     * Must initialize an instance of structure before accessing property:
      
-        let Constants = Constants()
-        print(instanceProperty)
+        1. let Constants = Constants()
+        2. print(Constants.instanceProperty)
 
  **Type properties**
 
@@ -23,11 +23,27 @@ import Foundation
  
     * Static keyword changes an instance property to a type property. Property now directly associated and accessed with the constant data type (instead of an instance of the Constants data type. Property may be accessed without initializing an instance of struct:
  
-        Constants.typeProperty
+        1. Constants.typeProperty
  */
 
-struct Constants {
+struct K {
 
+    static let cellIdentifier = "ReusableCell"
+    static let cellNibName = "MessageCell"
     static let joinSegue = "JoinBonfire"
     static let loginSegue = "LoginBonfire"
+    
+    struct BonfireColors {
+        static let orange = "BonfireOrange"
+        static let charcoal = "BonfireBlack"
+        static let tinder = "BonfireBeige"
+        static let smoke = "BonfireGray"
+    }
+    
+    struct FStore {
+        static let collectionName = "messages"
+        static let senderField = "sender"
+        static let bodyField = "body"
+        static let dateField = "date"
+    }
 }
