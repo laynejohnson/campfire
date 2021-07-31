@@ -42,7 +42,7 @@ class LoginViewController: UIViewController {
                     self.guideMessage.text = String(e.localizedDescription)
                 } else {
                     print("User logged in successfuly.")
-                    self.performSegue(withIdentifier: "LoginChat", sender: self)
+                    self.performSegue(withIdentifier: Constants.loginSegue, sender: self)
                 }
             }
         }

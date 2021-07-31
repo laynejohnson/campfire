@@ -125,7 +125,6 @@ Dependencies/
 **/xcshareddata/WorkspaceSettings.xcsettings
 
 ### Credentials ###
-*Constants.swift
 *Access.swift
 
 ### Firebase ###

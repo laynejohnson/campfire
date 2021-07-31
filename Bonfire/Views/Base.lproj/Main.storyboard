@@ -193,7 +193,7 @@
                         <outlet property="guideLabel" destination="XLj-wL-h47" id="4Rp-bE-Fse"/>
                         <outlet property="joinButton" destination="zK6-ne-fCH" id="md1-4z-MqT"/>
                         <outlet property="passwordField" destination="f1w-la-TQI" id="PRT-JN-yXL"/>
-                        <segue destination="svR-Mr-HdG" kind="show" identifier="JoinChat" id="DGC-cf-qpa"/>
+                        <segue destination="svR-Mr-HdG" kind="show" identifier="JoinBonfire" id="DGC-cf-qpa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wrD-uy-8yn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -320,7 +320,7 @@
                         <outlet property="guideMessage" destination="NLV-Tk-kA2" id="gss-L3-BNf"/>
                         <outlet property="loginButton" destination="Usb-lo-SpW" id="Fhx-nT-kCj"/>
                         <outlet property="passwordField" destination="Xc6-rF-R6m" id="HYr-Jt-GiJ"/>
-                        <segue destination="svR-Mr-HdG" kind="show" identifier="LoginChat" id="FHS-J3-Um3"/>
+                        <segue destination="svR-Mr-HdG" kind="show" identifier="LoginBonfire" id="FHS-J3-Um3"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1pc-f9-Ggg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

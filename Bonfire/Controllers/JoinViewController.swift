@@ -43,7 +43,7 @@ class JoinViewController: UIViewController {
                     // localizedDescription prints error in host language
                     self.guideLabel.text = e.localizedDescription
                 } else {
-                    self.performSegue(withIdentifier: "JoinChat", sender: self)
+                    self.performSegue(withIdentifier: Constants.joinSegue, sender: self)
                 }
             }
         }
