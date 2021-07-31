@@ -5,6 +5,7 @@
 //  Created by Layne Johnson on 7/28/21.
 //  Copyright © 2021. All rights reserved.
 
+import Foundation
 import UIKit
 import Firebase
 
@@ -16,7 +17,10 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
-    var messages:
+    var messages: [] = [
+        Message(sender)
+    ]
+        
     
     override func viewDidLoad() {
         super.viewDidLoad()
