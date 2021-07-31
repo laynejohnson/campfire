@@ -21,7 +21,7 @@ class ChatViewController: UIViewController {
     var messages: [Message] = [
         Message(sender: Constants.testChatter1, body: "Good day friend!"),
         Message(sender: Constants.testChatter2, body: "Good day to you, my friend!"),
-        Message(sender: Constants.testChatter1, body: "Shall we meet by the bonfire?")
+        Message(sender: Constants.testChatter1, body: "Meet you by the bonfire??")
     ]
         
     
@@ -39,6 +39,8 @@ class ChatViewController: UIViewController {
 
         // If gesture blocks other touches
         // tapGesture.cancelsTouchesInView = false
+        
+        tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -70,10 +72,10 @@ extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
         
         cell.textLabel?.textColor = UIColor.black
-        cell.textLabel?.text = "This is a cell"
+        cell.textLabel?.text = messages[indexPath.row].body
         
         return cell
     }
