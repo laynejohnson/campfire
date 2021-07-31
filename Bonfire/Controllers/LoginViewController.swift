@@ -8,8 +8,6 @@
 import UIKit
 import Firebase
 
- // TODO: Debug field stack view
-
 class LoginViewController: UIViewController {
     
     @IBOutlet weak var emailField: UITextField!

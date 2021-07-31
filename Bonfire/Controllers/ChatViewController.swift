@@ -9,7 +9,6 @@ import UIKit
 import Firebase
 
 // TODO: Implement MessageKit: https://cocoapods.org/pods/MessageKit
-// TODO: Implement signout
 
 class ChatViewController: UIViewController {
     
