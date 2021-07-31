@@ -7,7 +7,8 @@
 
 import Foundation
 
-/*
+/* Instance versus Type Properties:
+ 
  **Instance properties**
  
         let instanceProperty = ""value"
@@ -26,8 +27,9 @@ import Foundation
         1. Constants.typeProperty
  */
 
-struct K {
+struct Constants {
 
+    static let appName = "Bonfire"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
     static let joinSegue = "JoinBonfire"

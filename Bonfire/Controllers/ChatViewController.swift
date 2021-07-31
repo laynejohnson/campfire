@@ -16,10 +16,12 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
+    var messages:
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = "Bonfire"
+        title = Constants.appName
         navigationItem.hidesBackButton = true
     
     }
