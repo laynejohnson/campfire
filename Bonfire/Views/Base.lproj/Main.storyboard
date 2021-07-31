@@ -4,7 +4,6 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
-        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -336,8 +335,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c7m-wD-gmb">
-                                <rect key="frame" x="0.0" y="88" width="414" height="714"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="0.0" y="88" width="414" height="654"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="separatorColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="sectionIndexBackgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ReusableCell" id="a5n-5e-Tu7" userLabel="Reusable Cell">
                                         <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
@@ -350,21 +352,36 @@
                                 </prototypes>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RO-Sv-GZ3" userLabel="Lower View">
-                                <rect key="frame" x="0.0" y="802" width="414" height="60"/>
+                                <rect key="frame" x="0.0" y="742" width="414" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="456-Oj-apU">
-                                        <rect key="frame" x="20" y="6" width="374" height="34"/>
+                                        <rect key="frame" x="20" y="30" width="374" height="60"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-Qy-L2r" userLabel="Message Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="343" height="34"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-Qy-L2r" userLabel="Message Field">
+                                                <rect key="frame" x="0.0" y="0.0" width="314.5" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="gtM-hr-ME8"/>
+                                                </constraints>
+                                                <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                        <color key="value" red="0.090196078431372548" green="0.13333333333333333" blue="0.15294117647058825" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tB-tX-7gX" userLabel="Send Button">
-                                                <rect key="frame" x="353" y="0.0" width="21" height="34"/>
+                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tB-tX-7gX" userLabel="Send Button">
+                                                <rect key="frame" x="324.5" y="0.0" width="49.5" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="49.359999999999999" id="0jB-SN-Hwx"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="tintColor" red="0.99215686270000003" green="0.1450980392" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
                                                 <state key="normal" image="paperplane" catalog="system">
                                                     <color key="titleColor" red="0.99215686270000003" green="0.1450980392" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="sendPressed:" destination="svR-Mr-HdG" eventType="touchUpInside" id="mjS-gy-cjN"/>
@@ -373,25 +390,25 @@
                                         </subviews>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="456-Oj-apU" secondAttribute="bottom" constant="20" id="Adi-la-cY5"/>
                                     <constraint firstAttribute="trailing" secondItem="456-Oj-apU" secondAttribute="trailing" constant="20" id="Zo9-Bp-0XU"/>
+                                    <constraint firstAttribute="height" constant="120" id="c5r-oH-l0k"/>
+                                    <constraint firstItem="456-Oj-apU" firstAttribute="centerY" secondItem="4RO-Sv-GZ3" secondAttribute="centerY" id="vqj-kf-nt8"/>
+                                    <constraint firstItem="456-Oj-apU" firstAttribute="centerX" secondItem="4RO-Sv-GZ3" secondAttribute="centerX" id="wde-gm-Kuj"/>
                                     <constraint firstItem="456-Oj-apU" firstAttribute="leading" secondItem="4RO-Sv-GZ3" secondAttribute="leading" constant="20" id="ybh-f8-GPI"/>
                                 </constraints>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bvV-ub-IuZ"/>
-                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="4RO-Sv-GZ3" firstAttribute="leading" secondItem="bvV-ub-IuZ" secondAttribute="leading" id="4dj-Yb-VVQ"/>
                             <constraint firstItem="4RO-Sv-GZ3" firstAttribute="trailing" secondItem="bvV-ub-IuZ" secondAttribute="trailing" id="6AK-W6-0B8"/>
                             <constraint firstItem="4RO-Sv-GZ3" firstAttribute="top" secondItem="c7m-wD-gmb" secondAttribute="bottom" id="IDj-Kj-7AP"/>
-                            <constraint firstItem="4RO-Sv-GZ3" firstAttribute="top" secondItem="Stl-os-ITs" secondAttribute="top" constant="802" id="Nbi-bK-je1"/>
-                            <constraint firstItem="4RO-Sv-GZ3" firstAttribute="bottom" secondItem="bvV-ub-IuZ" secondAttribute="bottom" id="UfV-5D-akH"/>
                             <constraint firstItem="4RO-Sv-GZ3" firstAttribute="leading" secondItem="c7m-wD-gmb" secondAttribute="leading" id="ZzH-v5-5Qp"/>
                             <constraint firstItem="c7m-wD-gmb" firstAttribute="top" secondItem="bvV-ub-IuZ" secondAttribute="top" id="fM3-kF-K5t"/>
                             <constraint firstItem="4RO-Sv-GZ3" firstAttribute="trailing" secondItem="c7m-wD-gmb" secondAttribute="trailing" id="lD4-yR-t8w"/>
+                            <constraint firstItem="4RO-Sv-GZ3" firstAttribute="bottom" secondItem="bvV-ub-IuZ" secondAttribute="bottom" id="vrY-0T-kDj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="qtz-by-4gl">
@@ -419,6 +436,11 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="bl8-tK-Wb2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" red="0.99215686270000003" green="0.1450980392" blue="0.086274509799999996" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -431,13 +453,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FHS-J3-Um3"/>
+        <segue reference="DGC-cf-qpa"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="bonfire_logo" width="176" height="271"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
     </resources>
 </document>

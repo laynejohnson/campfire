@@ -34,6 +34,9 @@ struct Constants {
     static let cellNibName = "MessageCell"
     static let joinSegue = "JoinBonfire"
     static let loginSegue = "LoginBonfire"
+    static let testChatter1 = "hello@bonfire.com"
+    static let testChatter2 = "helloback@bonfire.com"
+    static let testPassword = "123456"
     
     struct BonfireColors {
         static let orange = "BonfireOrange"

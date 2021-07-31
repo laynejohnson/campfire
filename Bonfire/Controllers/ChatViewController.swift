@@ -10,6 +10,7 @@ import UIKit
 import Firebase
 
 // TODO: Implement MessageKit: https://cocoapods.org/pods/MessageKit
+// TODO: Add fire to nav bar
 
 class ChatViewController: UIViewController {
     
@@ -17,8 +18,10 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
-    var messages: [] = [
-        Message(sender)
+    var messages: [Message] = [
+        Message(sender: Constants.testChatter1, body: "Good day friend!"),
+        Message(sender: Constants.testChatter2, body: "Good day to you, my friend!"),
+        Message(sender: Constants.testChatter1, body: "Shall we meet by the bonfire?")
     ]
         
     
@@ -27,7 +30,15 @@ class ChatViewController: UIViewController {
         
         title = Constants.appName
         navigationItem.hidesBackButton = true
-    
+        
+        tableView.dataSource = self
+        
+        // Dismiss keyboard with tap gesture
+        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
+        view.addGestureRecognizer(tapGesture)
+
+        // If gesture blocks other touches
+        // tapGesture.cancelsTouchesInView = false
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -41,22 +52,31 @@ class ChatViewController: UIViewController {
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }
-        
-        
     }
     
     
     @IBAction func sendPressed(_ sender: Any) {
+        
     }
     
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destination.
-     // Pass the selected object to the new view controller.
-     }
-     */
+}
+
+extension ChatViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+
+        return messages.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath)
+        
+        cell.textLabel?.textColor = UIColor.black
+        cell.textLabel?.text = "This is a cell"
+        
+        return cell
+    }
+    
     
 }
