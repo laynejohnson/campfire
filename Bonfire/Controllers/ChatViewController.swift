@@ -74,8 +74,8 @@ extension ChatViewController: UITableViewDataSource {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
         
-        cell.textLabel?.textColor = UIColor.black
-        cell.textLabel?.text = messages[indexPath.row].body
+        cell.bubbleLabel.textColor = UIColor.black
+        cell.bubbleLabel.text = messages[indexPath.row].body
         
         return cell
     }
