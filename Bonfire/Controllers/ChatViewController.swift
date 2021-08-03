@@ -43,10 +43,10 @@ class ChatViewController: UIViewController {
     let db = Firestore.firestore()
     
     var messages: [Message] = [
-        // Test messages
         
-        Message(sender: Constants.testChatter1, body: "Hello, friend"),
-        Message(sender: Constants.testChatter2, body: "Hello, dear friend")
+        // Test messages
+        //        Message(sender: Constants.testChatter1, body: "Hello, friend"),
+        //        Message(sender: Constants.testChatter2, body: "Hello, dear friend")
         
     ]
     
@@ -72,9 +72,13 @@ class ChatViewController: UIViewController {
     
     func loadMessages() {
         
-        messages = []
-        
-        db.collection(Constants.FStore.collectionName).addSnapshotListener { querySnapshot, error in
+        // Listen for Firestore updates.
+        db.collection(Constants.FStore.collectionName)
+            .order(by: Constants.FStore.dateField)
+            .addSnapshotListener { querySnapshot, error in
+            
+            self.messages = []
+            
             if let e = error {
                 print("There was a problem retrieving data from Firestore: \(e)")
             } else {
@@ -88,10 +92,8 @@ class ChatViewController: UIViewController {
                             // Fetch main thread:
                             // Process happens in a closure (process happens in background); main thread must be fetched (process happening in foreground
                             DispatchQueue.main.async {
-                                self.messages.removeAll()
                                 self.tableView.reloadData()
                             }
-                            
                         }
                     }
                 }
@@ -119,7 +121,8 @@ class ChatViewController: UIViewController {
             
             db.collection(Constants.FStore.collectionName).addDocument(data: [
                 Constants.FStore.senderField: messageSender,
-                Constants.FStore.bodyField: messageBody
+                Constants.FStore.bodyField: messageBody,
+                Constants.FStore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
                     print("There was a problem saving data to Firestore: \(e)")
