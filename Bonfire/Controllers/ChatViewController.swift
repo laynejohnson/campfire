@@ -32,8 +32,6 @@ import Firebase
  }
  */
 
-
-
 class ChatViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -57,14 +55,7 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         tableView.dataSource = self
-        
-        // Dismiss keyboard with tap gesture
-        let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
-        view.addGestureRecognizer(tapGesture)
-        
-        // If gesture blocks other touches
-        // tapGesture.cancelsTouchesInView = false
-        
+    
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         
         loadMessages()
@@ -131,6 +122,7 @@ class ChatViewController: UIViewController {
                 }
             }
         }
+        messageTextField.text = ""
     }
 } // End ChatViewController
 
