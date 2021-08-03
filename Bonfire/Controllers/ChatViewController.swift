@@ -43,9 +43,12 @@ class ChatViewController: UIViewController {
     let db = Firestore.firestore()
     
     var messages: [Message] = [
-     
+        // Test messages
+        
+        Message(sender: Constants.testChatter1, body: "Hello, friend"),
+        Message(sender: Constants.testChatter2, body: "Hello, dear friend")
+        
     ]
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -70,7 +73,8 @@ class ChatViewController: UIViewController {
     func loadMessages() {
         
         messages = []
-        db.collection(Constants.FStore.collectionName).getDocuments { querySnapshot, error in
+        
+        db.collection(Constants.FStore.collectionName).addSnapshotListener { querySnapshot, error in
             if let e = error {
                 print("There was a problem retrieving data from Firestore: \(e)")
             } else {
@@ -84,6 +88,7 @@ class ChatViewController: UIViewController {
                             // Fetch main thread:
                             // Process happens in a closure (process happens in background); main thread must be fetched (process happening in foreground
                             DispatchQueue.main.async {
+                                self.messages.removeAll()
                                 self.tableView.reloadData()
                             }
                             
@@ -125,23 +130,23 @@ class ChatViewController: UIViewController {
         }
     }
 } // End ChatViewController
+
+extension ChatViewController: UITableViewDataSource {
     
-    extension ChatViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            
-            return messages.count
-        }
-        
-        func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-            
-            let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
-            
-            cell.bubbleLabel.textColor = UIColor.black
-            cell.bubbleLabel.text = messages[indexPath.row].body
-            
-            return cell
-        }
-        
-        
+        return messages.count
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
+        
+        cell.bubbleLabel.textColor = UIColor.black
+        cell.bubbleLabel.text = messages[indexPath.row].body
+        
+        return cell
+    }
+    
+    
+}
