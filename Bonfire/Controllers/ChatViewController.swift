@@ -84,6 +84,8 @@ class ChatViewController: UIViewController {
                             // Process happens in a closure (process happens in background); main thread must be fetched (process happening in foreground
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
+                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                             }
                         }
                     }
@@ -119,10 +121,13 @@ class ChatViewController: UIViewController {
                     print("There was a problem saving data to Firestore: \(e)")
                 } else {
                     print("Data saved successfully")
+                    // Use DispatchQueue to target main thread when inside closure.
+                    DispatchQueue.main.async {
+                        self.messageTextField.text = ""
+                    }
                 }
             }
         }
-        messageTextField.text = ""
     }
 } // End ChatViewController
 
@@ -133,15 +138,26 @@ extension ChatViewController: UITableViewDataSource {
         return messages.count
     }
     
+    // This method gets called for number messages.count
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+        let message = messages[indexPath.row]
+        
         let cell = tableView.dequeueReusableCell(withIdentifier: Constants.cellIdentifier, for: indexPath) as! MessageCell
-        
         cell.bubbleLabel.textColor = UIColor.black
-        cell.bubbleLabel.text = messages[indexPath.row].body
+        cell.bubbleLabel.text = message.body
         
+        // This is a message from the current user.
+        if message.sender == Auth.auth().currentUser?.email {
+            cell.receiverAvatar.isHidden = true
+            cell.senderAvatar.isHidden = false
+//            cell.messageBubble.backgroundColor = UIColor(named: Constants.BonfireColors.smoke)
+        } else {
+        // This is a message from another sender.
+            cell.receiverAvatar.isHidden = false
+            cell.senderAvatar.isHidden = true
+//            cell.messageBubble.backgroundColor = UIColor(named: Constants.BonfireColors.smoke)
+        }
         return cell
     }
-    
-    
 }

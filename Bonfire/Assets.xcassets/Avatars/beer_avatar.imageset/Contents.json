@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "beer_avatar.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

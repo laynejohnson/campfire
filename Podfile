@@ -5,8 +5,8 @@ target 'Bonfire' do
   use_frameworks!
 
   # Pods for Bonfire
-  
-#  pod 'MessageKit', '~> 3.6'
+
+pod 'MessageKit'
 pod 'IQKeyboardManagerSwift'
 
   # Firebase:
