@@ -27,6 +27,10 @@ class WelcomeViewController: UIViewController {
     // - - - - - - - - VARS - - - - - - - //
     // ---------------------------------- //
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         navigationController?.isNavigationBarHidden = true
@@ -36,13 +40,4 @@ class WelcomeViewController: UIViewController {
         super.viewWillDisappear(true)
         navigationController?.isNavigationBarHidden = false
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        
-    } // End viewDidLoad
-    
-    
 }
-

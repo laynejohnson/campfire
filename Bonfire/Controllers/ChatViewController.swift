@@ -11,7 +11,8 @@ import Firebase
 
 // TODO: Implement MessageKit: https://cocoapods.org/pods/MessageKit
 // TODO: Add fire to nav bar
-// TODO: Add user features
+// TODO: Add choose avatar
+// TODO: Add UI
 
 /*
  
@@ -85,7 +86,7 @@ class ChatViewController: UIViewController {
                             DispatchQueue.main.async {
                                 self.tableView.reloadData()
                                 let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                                self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
                             }
                         }
                     }
@@ -124,6 +125,8 @@ class ChatViewController: UIViewController {
                     // Use DispatchQueue to target main thread when inside closure.
                     DispatchQueue.main.async {
                         self.messageTextField.text = ""
+                        let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                        self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
                     }
                 }
             }
