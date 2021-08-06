@@ -26,8 +26,8 @@ class LoginViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
         
         // If gesture blocks other touches
-//        tapGesture.cancelsTouchesInView = false
-       
+        //        tapGesture.cancelsTouchesInView = false
+        
     }
     
     @IBAction func loginPressed(_ sender: UIButton) {

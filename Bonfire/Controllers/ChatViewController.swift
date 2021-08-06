@@ -56,7 +56,7 @@ class ChatViewController: UIViewController {
         navigationItem.hidesBackButton = true
         
         tableView.dataSource = self
-    
+        
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         
         loadMessages()
@@ -68,31 +68,31 @@ class ChatViewController: UIViewController {
         db.collection(Constants.FStore.collectionName)
             .order(by: Constants.FStore.dateField)
             .addSnapshotListener { querySnapshot, error in
-            
-            self.messages = []
-            
-            if let e = error {
-                print("There was a problem retrieving data from Firestore: \(e)")
-            } else {
-                if let snapshotDocuments = querySnapshot?.documents {
-                    for doc in snapshotDocuments {
-                        let data = doc.data()
-                        if let sender = data[Constants.FStore.senderField] as? String, let messageBody = data[Constants.FStore.bodyField] as? String {
-                            let newMessage = Message(sender: sender, body: messageBody)
-                            self.messages.append(newMessage)
-                            
-                            // Fetch main thread:
-                            // Process happens in a closure (process happens in background); main thread must be fetched (process happening in foreground
-                            DispatchQueue.main.async {
-                                self.tableView.reloadData()
-                                let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+                
+                self.messages = []
+                
+                if let e = error {
+                    print("There was a problem retrieving data from Firestore: \(e)")
+                } else {
+                    if let snapshotDocuments = querySnapshot?.documents {
+                        for doc in snapshotDocuments {
+                            let data = doc.data()
+                            if let sender = data[Constants.FStore.senderField] as? String, let messageBody = data[Constants.FStore.bodyField] as? String {
+                                let newMessage = Message(sender: sender, body: messageBody)
+                                self.messages.append(newMessage)
+                                
+                                // Fetch main thread:
+                                // Process happens in a closure (process happens in background); main thread must be fetched (process happening in foreground
+                                DispatchQueue.main.async {
+                                    self.tableView.reloadData()
+                                    let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                                }
                             }
                         }
                     }
                 }
             }
-        }
     }
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
@@ -126,7 +126,7 @@ class ChatViewController: UIViewController {
                     DispatchQueue.main.async {
                         self.messageTextField.text = ""
                         let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                        self.tableView.scrollToRow(at: indexPath, at: .none, animated: true)
+                        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                     }
                 }
             }
@@ -154,12 +154,12 @@ extension ChatViewController: UITableViewDataSource {
         if message.sender == Auth.auth().currentUser?.email {
             cell.receiverAvatar.isHidden = true
             cell.senderAvatar.isHidden = false
-//            cell.messageBubble.backgroundColor = UIColor(named: Constants.BonfireColors.smoke)
+            //            cell.messageBubble.backgroundColor = UIColor(named: Constants.BonfireColors.smoke)
         } else {
-        // This is a message from another sender.
+            // This is a message from another sender.
             cell.receiverAvatar.isHidden = false
             cell.senderAvatar.isHidden = true
-//            cell.messageBubble.backgroundColor = UIColor(named: Constants.BonfireColors.smoke)
+            //            cell.messageBubble.backgroundColor = UIColor(named: Constants.BonfireColors.smoke)
         }
         return cell
     }

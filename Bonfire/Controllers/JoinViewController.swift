@@ -8,13 +8,16 @@
 import UIKit
 import Firebase
 
- // TODO: Add username pop-up
- // TODO: Fix text alignment; move to lower screen
- // TODO: Dismiss keyboard if error
- // TODO: Add ember animation
+// TODO: Add username pop-up
+// TODO: Fix text alignment; move to lower screen
+// TODO: Dismiss keyboard if error
+// TODO: Add ember animation
+// TODO: Debug table view view
+//https://developer.apple.com/documentation/uikit/uitableviewdelegate
+//https://github.com/Kilograpp/IQkeyboardManager
 
 class JoinViewController: UIViewController {
-
+    
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
@@ -22,7 +25,7 @@ class JoinViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         guideLabel.text = ""
         
         // Dismiss keyboard with tap gesture
@@ -30,7 +33,7 @@ class JoinViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
         
         // If gesture blocks other touches
-//        tapGesture.cancelsTouchesInView = false
+        //        tapGesture.cancelsTouchesInView = false
         
     }
     
@@ -53,6 +56,6 @@ class JoinViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-
-
+    
+    
 }
