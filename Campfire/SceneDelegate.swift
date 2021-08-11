@@ -1,6 +1,6 @@
 //
 //  SceneDelegate.swift
-//  Bonfire
+//  Campfire
 //
 //  Created by Layne Johnson on 7/28/21.
 //

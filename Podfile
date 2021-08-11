@@ -4,7 +4,7 @@ target 'Campfire' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Bonfire
+  # Pods for Campfire
 
 pod 'MessageKit'
 pod 'IQKeyboardManagerSwift'

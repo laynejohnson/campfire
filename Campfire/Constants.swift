@@ -1,6 +1,6 @@
 //
 //  Constants.swift
-//  Bonfire
+//  Campfire
 //
 //  Created by Layne Johnson on 7/31/21.
 //
