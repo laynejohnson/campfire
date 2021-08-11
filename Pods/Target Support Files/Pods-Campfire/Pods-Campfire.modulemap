@@ -1,0 +1,6 @@
+framework module Pods_Campfire {
+  umbrella header "Pods-Campfire-umbrella.h"
+
+  export *
+  module * { export * }
+}

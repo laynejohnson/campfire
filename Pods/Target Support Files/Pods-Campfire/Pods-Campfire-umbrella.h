@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_BonfireVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_BonfireVersionString[];
+FOUNDATION_EXPORT double Pods_CampfireVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_CampfireVersionString[];
 
