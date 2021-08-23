@@ -10,8 +10,8 @@
 		1831D4ACAB0983199DB0AF05 /* Pods_Campfire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B9ACDCFDE6808F880C122D /* Pods_Campfire.framework */; };
 		E801124726B5906600D0BE4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E801124626B5906600D0BE4B /* Constants.swift */; };
 		E801124926B59B5F00D0BE4B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E801124826B59B5F00D0BE4B /* Message.swift */; };
+		E88CB8CB26D44C3500C0F5A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E88CB8CA26D44C3500C0F5A1 /* GoogleService-Info.plist */; };
 		E8A99FD226B2E950005F85EA /* Access.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A99FD126B2E950005F85EA /* Access.swift */; };
-		E8A99FD626B30882005F85EA /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E8A99FD526B30882005F85EA /* GoogleService-Info.plist */; };
 		E8CDC99826B196B2004518D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99726B196B2004518D0 /* AppDelegate.swift */; };
 		E8CDC99A26B196B2004518D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99926B196B2004518D0 /* SceneDelegate.swift */; };
 		E8CDC99C26B196B2004518D0 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99B26B196B2004518D0 /* WelcomeViewController.swift */; };
@@ -33,8 +33,8 @@
 		68C204D5AF6B8228BE8F9AC3 /* Pods-Campfire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Campfire.debug.xcconfig"; path = "Target Support Files/Pods-Campfire/Pods-Campfire.debug.xcconfig"; sourceTree = "<group>"; };
 		E801124626B5906600D0BE4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E801124826B59B5F00D0BE4B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E88CB8CA26D44C3500C0F5A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8A99FD126B2E950005F85EA /* Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
-		E8A99FD526B30882005F85EA /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8CDC99426B196B2004518D0 /* Campfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Campfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CDC99726B196B2004518D0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8CDC99926B196B2004518D0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,7 +112,7 @@
 				E8CDC9A026B196B3004518D0 /* Assets.xcassets */,
 				E8CDC9A226B196B3004518D0 /* LaunchScreen.storyboard */,
 				E8CDC9A526B196B3004518D0 /* Info.plist */,
-				E8A99FD526B30882005F85EA /* GoogleService-Info.plist */,
+				E88CB8CA26D44C3500C0F5A1 /* GoogleService-Info.plist */,
 			);
 			path = Campfire;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			files = (
 				E8DDAF9226B5C6C800777A59 /* MessageCell.xib in Resources */,
 				E8CDC9A426B196B3004518D0 /* LaunchScreen.storyboard in Resources */,
-				E8A99FD626B30882005F85EA /* GoogleService-Info.plist in Resources */,
+				E88CB8CB26D44C3500C0F5A1 /* GoogleService-Info.plist in Resources */,
 				E8CDC9A126B196B3004518D0 /* Assets.xcassets in Resources */,
 				E8CDC99F26B196B2004518D0 /* Main.storyboard in Resources */,
 			);

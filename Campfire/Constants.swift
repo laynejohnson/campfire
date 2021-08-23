@@ -32,18 +32,11 @@ struct Constants {
     static let appName = "Bonfire"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
-    static let joinSegue = "JoinBonfire"
-    static let loginSegue = "LoginBonfire"
-    static let testChatter1 = "hello@bonfire.com"
-    static let testChatter2 = "helloback@bonfire.com"
+    static let joinSegue = "Join"
+    static let loginSegue = "Login"
+    static let testChatter1 = "hello@campfire.com"
+    static let testChatter2 = "helloback@campfire.com"
     static let testPassword = "123456"
-    
-    struct BonfireColors {
-        static let orange = "BonfireOrange"
-        static let charcoal = "BonfireBlack"
-        static let tinder = "BonfireBeige"
-        static let smoke = "BonfireGray"
-    }
     
     struct FStore {
         static let collectionName = "messages"
