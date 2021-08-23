@@ -14,25 +14,6 @@ import Firebase
 // TODO: Add choose avatar
 // TODO: Add UI
 
-/*
- 
- let user = Auth.auth().currentUser
- if let user = user {
- // The user's ID, unique to the Firebase project.
- // Do NOT use this value to authenticate with your backend server,
- // if you have one. Use getTokenWithCompletion:completion: instead.
- let uid = user.uid
- let email = user.email
- let photoURL = user.photoURL
- var multiFactorString = "MultiFactor: "
- for info in user.multiFactor.enrolledFactors {
- multiFactorString += info.displayName ?? "[DispayName]"
- multiFactorString += " "
- }
- // ...
- }
- */
-
 class ChatViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -86,7 +67,7 @@ class ChatViewController: UIViewController {
                                 DispatchQueue.main.async {
                                     self.tableView.reloadData()
                                     let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
                                 }
                             }
                         }

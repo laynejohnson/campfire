@@ -10,7 +10,7 @@
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -45,8 +45,8 @@
                                     <constraint firstItem="CRH-MR-ViA" firstAttribute="centerX" secondItem="wsD-2o-Dxk" secondAttribute="centerX" id="wt3-Qh-bqK"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="bonfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="36N-Vf-Lsk">
-                                <rect key="frame" x="119" y="268.5" width="176" height="271"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="campfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="36N-Vf-Lsk">
+                                <rect key="frame" x="119" y="271.5" width="176" height="265"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -72,7 +72,7 @@
         <!--Join View Controller-->
         <scene sceneID="0Zb-ur-8eZ">
             <objects>
-                <viewController id="O2o-Bf-k5F" customClass="JoinViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="O2o-Bf-k5F" customClass="JoinViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qW-i9-KRi" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -83,7 +83,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdA-zx-Wzy" userLabel="Bonfire View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="287.5"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bonfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="xFM-WK-foU">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="xFM-WK-foU">
                                                 <rect key="frame" x="119" y="18" width="176" height="251.5"/>
                                             </imageView>
                                         </subviews>
@@ -202,7 +202,7 @@
         <!--Login View Controller-->
         <scene sceneID="BRK-y4-dwi">
             <objects>
-                <viewController id="932-yJ-Eof" userLabel="Login View Controller" customClass="LoginViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="932-yJ-Eof" userLabel="Login View Controller" customClass="LoginViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1y-tv-lV5" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -213,7 +213,7 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-fe-z58" userLabel="Bonfire View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
                                         <subviews>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="bonfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hIr-cn-ZBd">
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="campfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="hIr-cn-ZBd">
                                                 <rect key="frame" x="119" y="18" width="176" height="271"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             </imageView>
@@ -223,7 +223,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Fc-r2N" userLabel="Field Stack View">
                                         <rect key="frame" x="0.0" y="322" width="414" height="135"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hello@bonfire.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-0E-nnl">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hello@campfire.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-0E-nnl">
                                                 <rect key="frame" x="30" y="0.0" width="354" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
@@ -329,7 +329,7 @@
         <!--Chat View Controller-->
         <scene sceneID="pQz-cR-eoW">
             <objects>
-                <viewController id="svR-Mr-HdG" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Bonfire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="svR-Mr-HdG" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Stl-os-ITs">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -401,7 +401,7 @@
                             <constraint firstItem="4RO-Sv-GZ3" firstAttribute="bottom" secondItem="bvV-ub-IuZ" secondAttribute="bottom" id="vrY-0T-kDj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="qtz-by-4gl">
+                    <navigationItem key="navigationItem" title="Campfire" id="qtz-by-4gl">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="I0A-jZ-dta">
                             <connections>
                                 <action selector="logOutPressed:" destination="svR-Mr-HdG" id="NkA-qN-bKt"/>
@@ -444,10 +444,10 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DGC-cf-qpa"/>
+        <segue reference="FHS-J3-Um3"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="bonfire_logo" width="176" height="271"/>
+        <image name="campfire_logo" width="176" height="265"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
     </resources>
 </document>
