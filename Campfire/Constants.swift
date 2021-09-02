@@ -39,6 +39,7 @@ struct Constants {
     static let testPassword = "123456"
     
     struct FStore {
+        
         static let collectionName = "messages"
         static let senderField = "sender"
         static let bodyField = "body"

@@ -53,8 +53,11 @@ class ChatViewController: UIViewController {
                 self.messages = []
                 
                 if let e = error {
+                    
                     print("There was a problem retrieving data from Firestore: \(e)")
+                    
                 } else {
+                    
                     if let snapshotDocuments = querySnapshot?.documents {
                         for doc in snapshotDocuments {
                             let data = doc.data()
@@ -100,8 +103,11 @@ class ChatViewController: UIViewController {
                 Constants.FStore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
+                    
                     print("There was a problem saving data to Firestore: \(e)")
+                    
                 } else {
+                    
                     print("Data saved successfully")
                     // Use DispatchQueue to target main thread when inside closure.
                     DispatchQueue.main.async {
@@ -133,14 +139,15 @@ extension ChatViewController: UITableViewDataSource {
         
         // This is a message from the current user.
         if message.sender == Auth.auth().currentUser?.email {
+            
             cell.receiverAvatar.isHidden = true
             cell.senderAvatar.isHidden = false
-            //            cell.messageBubble.backgroundColor = UIColor(named: Constants.BonfireColors.smoke)
+            
         } else {
+            
             // This is a message from another sender.
             cell.receiverAvatar.isHidden = false
             cell.senderAvatar.isHidden = true
-            //            cell.messageBubble.backgroundColor = UIColor(named: Constants.BonfireColors.smoke)
         }
         return cell
     }

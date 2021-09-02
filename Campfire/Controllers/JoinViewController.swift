@@ -14,7 +14,6 @@ import Firebase
 // TODO: Add ember animation
 // TODO: Debug table view view
 //https://developer.apple.com/documentation/uikit/uitableviewdelegate
-//https://github.com/Kilograpp/IQkeyboardManager
 
 class JoinViewController: UIViewController {
     
@@ -45,6 +44,7 @@ class JoinViewController: UIViewController {
                     print(e.localizedDescription)
                     // localizedDescription prints error in host language
                     self.guideLabel.text = e.localizedDescription
+                    
                 } else {
                     self.performSegue(withIdentifier: Constants.joinSegue, sender: self)
                 }
@@ -56,6 +56,4 @@ class JoinViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
     }
-    
-    
 }
