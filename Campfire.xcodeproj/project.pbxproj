@@ -85,6 +85,7 @@
 		E8CDC98B26B196B2004518D0 = {
 			isa = PBXGroup;
 			children = (
+				E87B8F8726E10FA2008B185B /* README.md */,
 				E8CDC99626B196B2004518D0 /* Campfire */,
 				E8CDC99526B196B2004518D0 /* Products */,
 				6E48F1F03B98F031EDEE74F2 /* Pods */,
@@ -114,7 +115,6 @@
 				E8CDC9A226B196B3004518D0 /* LaunchScreen.storyboard */,
 				E8CDC9A526B196B3004518D0 /* Info.plist */,
 				E88CB8CA26D44C3500C0F5A1 /* GoogleService-Info.plist */,
-				E87B8F8726E10FA2008B185B /* README.md */,
 			);
 			path = Campfire;
 			sourceTree = "<group>";
