@@ -33,6 +33,7 @@
 		68C204D5AF6B8228BE8F9AC3 /* Pods-Campfire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Campfire.debug.xcconfig"; path = "Target Support Files/Pods-Campfire/Pods-Campfire.debug.xcconfig"; sourceTree = "<group>"; };
 		E801124626B5906600D0BE4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E801124826B59B5F00D0BE4B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E87B8F8726E10FA2008B185B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E88CB8CA26D44C3500C0F5A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8A99FD126B2E950005F85EA /* Access.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Access.swift; sourceTree = "<group>"; };
 		E8CDC99426B196B2004518D0 /* Campfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Campfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -113,6 +114,7 @@
 				E8CDC9A226B196B3004518D0 /* LaunchScreen.storyboard */,
 				E8CDC9A526B196B3004518D0 /* Info.plist */,
 				E88CB8CA26D44C3500C0F5A1 /* GoogleService-Info.plist */,
+				E87B8F8726E10FA2008B185B /* README.md */,
 			);
 			path = Campfire;
 			sourceTree = "<group>";
