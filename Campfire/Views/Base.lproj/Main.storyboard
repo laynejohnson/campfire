@@ -23,7 +23,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRH-MR-ViA">
                                         <rect key="frame" x="6.5" y="0.0" width="44" height="39"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="Join">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -34,7 +34,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-zL-dJS">
                                         <rect key="frame" x="0.0" y="49" width="57" height="39"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="backgroundColor" name="AccentColor"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -193,10 +193,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="Oqq-fI-n6i"/>
                     <connections>
-                        <outlet property="emailField" destination="izr-uF-MoE" id="tSD-Ib-Q3k"/>
+                        <outlet property="emailTextField" destination="izr-uF-MoE" id="tSD-Ib-Q3k"/>
                         <outlet property="guideLabel" destination="XLj-wL-h47" id="4Rp-bE-Fse"/>
                         <outlet property="joinButton" destination="zK6-ne-fCH" id="md1-4z-MqT"/>
-                        <outlet property="passwordField" destination="f1w-la-TQI" id="PRT-JN-yXL"/>
+                        <outlet property="passwordTextField" destination="f1w-la-TQI" id="PRT-JN-yXL"/>
                         <segue destination="svR-Mr-HdG" kind="show" identifier="Join" id="DGC-cf-qpa"/>
                     </connections>
                 </viewController>
@@ -474,6 +474,9 @@
     <resources>
         <image name="campfire_logo" width="176" height="265"/>
         <image name="paperplane" catalog="system" width="128" height="118"/>
+        <namedColor name="AccentColor">
+            <color red="0.70588439700000005" green="0.3490398824" blue="0.29801478980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="Off White">
             <color red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>

@@ -15,10 +15,10 @@ import Firebase
 // TODO: Debug table view view
 //https://developer.apple.com/documentation/uikit/uitableviewdelegate
 
-class JoinViewController: UIViewController {
+class JoinViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var guideLabel: UILabel!
     
@@ -34,11 +34,25 @@ class JoinViewController: UIViewController {
         // If gesture blocks other touches
         //        tapGesture.cancelsTouchesInView = false
         
+        // Set current class as text field delegate.
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
+        
+        
     }
+    
+    // MARK: - UITextFieldDelegate Functions
+    
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+      
+        textField.placeholder = ""
+    }
+    
+    // MARK: - IBActions
     
     @IBAction func joinPressed(_ sender: UIButton) {
         
-        if let email = emailField.text, let password = passwordField.text {
+        if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     print(e.localizedDescription)

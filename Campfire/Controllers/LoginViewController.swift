@@ -8,7 +8,7 @@
 import UIKit
 import Firebase
 
-class LoginViewController: UIViewController {
+class LoginViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
@@ -28,7 +28,19 @@ class LoginViewController: UIViewController {
         // If gesture blocks other touches
         //        tapGesture.cancelsTouchesInView = false
         
+        emailField.delegate = self
+        passwordField.delegate = self
+        
     }
+    
+    // MARK: - UITextFieldDelegate Functions
+    
+    public func textFieldDidBeginEditing(_ textField: UITextField) {
+      
+        textField.placeholder = ""
+    }
+    
+    // MARK: - IBActions
     
     @IBAction func loginPressed(_ sender: UIButton) {
         
