@@ -15,21 +15,8 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bonfire_F9F9F9" translatesAutoresizingMaskIntoConstraints="NO" id="d44-tb-ZAn">
-                                <rect key="frame" x="83" y="298.5" width="248" height="299"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="248" id="THK-6W-rxh"/>
-                                    <constraint firstAttribute="height" constant="299" id="UQk-zf-OnF"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="AccentColor"/>
-                        <constraints>
-                            <constraint firstItem="d44-tb-ZAn" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="1wQ-AM-QCv"/>
-                            <constraint firstItem="d44-tb-ZAn" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="cU7-Rw-0jV"/>
-                        </constraints>
+                        <color key="backgroundColor" name="Off White"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -38,9 +25,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="bonfire_F9F9F9" width="311" height="374"/>
-        <namedColor name="AccentColor">
-            <color red="0.99215686274509807" green="0.14509803921568629" blue="0.086274509803921567" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Off White">
+            <color red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

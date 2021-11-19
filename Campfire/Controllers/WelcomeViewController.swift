@@ -17,7 +17,7 @@ class WelcomeViewController: UIViewController {
     // - - - - - - -  OUTLETS - - - - - - //
     // ---------------------------------- //
     
-    @IBOutlet weak var bonfireImage: UIImageView!
+    @IBOutlet weak var campfireImage: UIImageView!
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     

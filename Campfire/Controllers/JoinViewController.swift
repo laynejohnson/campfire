@@ -46,7 +46,7 @@ class JoinViewController: UIViewController {
                     self.guideLabel.text = e.localizedDescription
                     
                 } else {
-                    self.performSegue(withIdentifier: Constants.joinSegue, sender: self)
+                    self.performSegue(withIdentifier: Constants.Segues.joinSegue, sender: self)
                 }
             }
         }
