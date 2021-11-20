@@ -14,7 +14,7 @@ import Firebase
 // TODO: Add choose avatar
 // TODO: Add UI
 
-class ChatViewController: UIViewController {
+class ChatViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
@@ -36,12 +36,20 @@ class ChatViewController: UIViewController {
         title = Constants.appName
         navigationItem.hidesBackButton = true
         
+        // Set current class as delegate for text field.
+        messageTextField.delegate = self
+        
+        // Set current class as delegate for table view.
         tableView.dataSource = self
         
+        // Register message cell nib.
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         
+        // Retrieve messages from Firestore.
         loadMessages()
     }
+    
+    // MARK: - Load Firestore
     
     func loadMessages() {
         
@@ -78,6 +86,8 @@ class ChatViewController: UIViewController {
                 }
             }
     }
+    
+    // MARK: - IBActions
     
     @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
         
@@ -120,6 +130,8 @@ class ChatViewController: UIViewController {
         }
     }
 } // End ChatViewController
+
+// MARK: - Table View Delegate Functions
 
 extension ChatViewController: UITableViewDataSource {
     
