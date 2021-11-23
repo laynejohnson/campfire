@@ -29,12 +29,6 @@ import Foundation
 
 struct Constants {
     
-    struct Segues {
-        static let navigationController = "ToNavigationController"
-        static let joinSegue = "Join"
-        static let loginSegue = "Login"
-    }
-
     static let appName = "Campfire"
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
@@ -42,6 +36,13 @@ struct Constants {
     static let testChatter1 = "hello@campfire.com"
     static let testChatter2 = "helloback@campfire.com"
     static let testPassword = "123456"
+    
+    struct Segues {
+        
+        static let navigationController = "ToNavigationController"
+        static let joinSegue = "Join"
+        static let loginSegue = "Login"
+    }
     
     struct FStore {
         

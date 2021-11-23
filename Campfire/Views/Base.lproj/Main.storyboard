@@ -15,7 +15,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-2o-Dxk" userLabel="Button Stack View">
@@ -23,7 +23,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRH-MR-ViA">
                                         <rect key="frame" x="6.5" y="0.0" width="44" height="39"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="Join">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -34,7 +34,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-zL-dJS">
                                         <rect key="frame" x="0.0" y="49" width="57" height="39"/>
-                                        <color key="backgroundColor" name="AccentColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" systemColor="labelColor"/>
@@ -79,7 +79,7 @@
             <objects>
                 <viewController id="O2o-Bf-k5F" customClass="JoinViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qW-i9-KRi" userLabel="Main View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zat-UM-lLR" userLabel="Main Stack View">
@@ -209,7 +209,7 @@
             <objects>
                 <viewController id="932-yJ-Eof" userLabel="Login View Controller" customClass="LoginViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1y-tv-lV5" userLabel="Main View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wod-Nw-VMY" userLabel="Main Stack View">
@@ -336,7 +336,7 @@
             <objects>
                 <viewController id="svR-Mr-HdG" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Stl-os-ITs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c7m-wD-gmb">
@@ -349,15 +349,12 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RO-Sv-GZ3" userLabel="Lower View">
                                 <rect key="frame" x="0.0" y="666" width="414" height="120"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="456-Oj-apU">
-                                        <rect key="frame" x="20" y="30" width="374" height="60"/>
+                                    <stackView opaque="NO" contentMode="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="456-Oj-apU">
+                                        <rect key="frame" x="20" y="37.5" width="374" height="45"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-Qy-L2r" userLabel="Message Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="314.5" height="60"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="319" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="60" id="gtM-hr-ME8"/>
-                                                </constraints>
                                                 <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                                 <textInputTraits key="textInputTraits"/>
@@ -368,22 +365,26 @@
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tB-tX-7gX" userLabel="Send Button">
-                                                <rect key="frame" x="324.5" y="0.0" width="49.5" height="60"/>
+                                                <rect key="frame" x="329" y="0.0" width="45" height="45"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="49.359999999999999" id="0jB-SN-Hwx"/>
+                                                    <constraint firstAttribute="width" constant="45" id="iPW-LS-I0q"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal">
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <imageReference key="image" image="paperplane" catalog="system" symbolScale="large"/>
-                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="large"/>
+                                                    <imageReference key="image" image="Group" symbolScale="large"/>
+                                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
                                                 <connections>
                                                     <action selector="sendPressed:" destination="svR-Mr-HdG" eventType="touchUpInside" id="mjS-gy-cjN"/>
                                                 </connections>
                                             </button>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="63l-zT-HDo"/>
+                                            <constraint firstItem="5tB-tX-7gX" firstAttribute="centerY" secondItem="WWe-Qy-L2r" secondAttribute="centerY" id="95f-qy-Eyu"/>
+                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
@@ -469,16 +470,13 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DGC-cf-qpa"/>
+        <segue reference="FHS-J3-Um3"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="Group" width="478" height="478"/>
         <image name="campfire_logo" width="176" height="265"/>
-        <image name="paperplane" catalog="system" width="128" height="118"/>
-        <namedColor name="AccentColor">
-            <color red="0.70588439700000005" green="0.3490398824" blue="0.29801478980000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
         <namedColor name="Off White">
-            <color red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

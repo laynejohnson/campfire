@@ -9,11 +9,6 @@ import Foundation
 import UIKit
 import Firebase
 
-// TODO: Implement MessageKit: https://cocoapods.org/pods/MessageKit
-// TODO: Add fire to nav bar
-// TODO: Add choose avatar
-// TODO: Add UI
-
 class ChatViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
