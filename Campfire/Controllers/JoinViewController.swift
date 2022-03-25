@@ -15,6 +15,14 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var notificationLabel: UILabel!
     
+    var isEmailEntered: Bool {
+        return emailTextField.text!.isEmpty
+    }
+    
+    var isPasswordEntered: Bool {
+        return passwordTextField.text!.isEmpty
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,6 +48,15 @@ class JoinViewController: UIViewController {
     // MARK: - IBActions
     
     @IBAction func joinButtonPressed(_ sender: UIButton) {
+        
+        guard emailTextField.text!.isValidEmail else {
+            print("Please enter a valid email address.")
+            
+            DispatchQueue.main.async {
+                self.notificationLabel.text = "Please enter a valid email address."
+            }
+            return
+        }
     
         // Firebase create user.
         if let email = emailTextField.text, let password = passwordTextField.text {

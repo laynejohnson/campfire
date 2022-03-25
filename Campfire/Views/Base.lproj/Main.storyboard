@@ -153,7 +153,7 @@
                                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                                 <connections>
-                                                    <action selector="joinPressed:" destination="O2o-Bf-k5F" eventType="touchUpInside" id="pvC-MX-Ubc"/>
+                                                    <action selector="joinButtonPressed:" destination="O2o-Bf-k5F" eventType="touchUpInside" id="Nw1-8n-mpq"/>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose a password with &gt; 6 characters." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="XLj-wL-h47" userLabel="Guide Label">
@@ -194,7 +194,6 @@
                     <navigationItem key="navigationItem" id="Oqq-fI-n6i"/>
                     <connections>
                         <outlet property="emailTextField" destination="izr-uF-MoE" id="tSD-Ib-Q3k"/>
-                        <outlet property="joinButton" destination="zK6-ne-fCH" id="md1-4z-MqT"/>
                         <outlet property="notificationLabel" destination="XLj-wL-h47" id="4Rp-bE-Fse"/>
                         <outlet property="passwordTextField" destination="f1w-la-TQI" id="PRT-JN-yXL"/>
                         <segue destination="svR-Mr-HdG" kind="show" identifier="Join" id="DGC-cf-qpa"/>
@@ -471,7 +470,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FHS-J3-Um3"/>
+        <segue reference="DGC-cf-qpa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
