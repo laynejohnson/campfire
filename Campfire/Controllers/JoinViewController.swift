@@ -45,28 +45,22 @@ class JoinViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
+     // TODO: Add error handling.
+//    func handleError(_ error: Error) {
+//
+//    }
+//
     // MARK: - IBActions
     
     @IBAction func joinButtonPressed(_ sender: UIButton) {
         
-        guard emailTextField.text!.isValidEmail else {
-            print("Please enter a valid email address.")
-            
-            DispatchQueue.main.async {
-                self.notificationLabel.text = "Please enter a valid email address."
-            }
-            return
-        }
-    
         // Firebase create user.
         if let email = emailTextField.text, let password = passwordTextField.text {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     print(e.localizedDescription)
-                    DispatchQueue.main.async {
-                        // Print error in host language.
-                        self.notificationLabel.text = e.localizedDescription
-                    }
+                    print(e._code)
+//                    handleError(e._code)
                 } else {
                     print("User created successfully!")
                     DispatchQueue.main.async {
