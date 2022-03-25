@@ -13,6 +13,7 @@ class WelcomeViewController: UIViewController {
     @IBOutlet weak var joinWelcomeButton: UIButton!
     @IBOutlet weak var loginWelcomeButton: UIButton!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

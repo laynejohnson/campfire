@@ -22,11 +22,11 @@ class JoinViewController: UIViewController {
         // Notification label (validation/errors).
         notificationLabel.text = ""
         
-        // Tap on screen to dismiss keyboard.
+        // Tap screen to dismiss keyboard.
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
         
-        // Set text field delegate.
+        // Delegates.
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
@@ -37,6 +37,7 @@ class JoinViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
+    // MARK: - IBActions
     
     @IBAction func joinButtonPressed(_ sender: UIButton) {
     
@@ -45,12 +46,18 @@ class JoinViewController: UIViewController {
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let e = error {
                     print(e.localizedDescription)
-                    // Print error in host language.
-                    self.notificationLabel.text = e.localizedDescription
-                    
+                    DispatchQueue.main.async {
+                        // Print error in host language.
+                        self.notificationLabel.text = e.localizedDescription
+                    }
                 } else {
-                    // Segue to chat.
-                    self.performSegue(withIdentifier: Constants.Segues.joinToChat, sender: self)
+                    print("User created successfully!")
+                    DispatchQueue.main.async {
+                        // Set notification label.
+                        self.notificationLabel.text = "Welcome to Campfire! 👋"
+                        // Segue to chat.
+                        self.performSegue(withIdentifier: Constants.Segues.joinToChat, sender: self)
+                    }
                 }
             }
         }

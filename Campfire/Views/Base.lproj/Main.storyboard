@@ -321,8 +321,8 @@
                     <navigationItem key="navigationItem" id="ObK-fu-6fZ"/>
                     <connections>
                         <outlet property="emailField" destination="Mcn-0E-nnl" id="XDD-Uq-J0X"/>
-                        <outlet property="guideMessage" destination="NLV-Tk-kA2" id="gss-L3-BNf"/>
                         <outlet property="loginButton" destination="Usb-lo-SpW" id="Fhx-nT-kCj"/>
+                        <outlet property="notificationLabel" destination="NLV-Tk-kA2" id="gss-L3-BNf"/>
                         <outlet property="passwordField" destination="Xc6-rF-R6m" id="HYr-Jt-GiJ"/>
                         <segue destination="svR-Mr-HdG" kind="show" identifier="Login" id="FHS-J3-Um3"/>
                     </connections>
