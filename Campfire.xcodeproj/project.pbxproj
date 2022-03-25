@@ -145,9 +145,9 @@
 		E8CDC9AC26B19A22004518D0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				E82FF49B274821FE00E8147F /* Launch */,
-				E82FF49A274821F000E8147F /* Messages */,
 				E8CDC99D26B196B2004518D0 /* Main.storyboard */,
+				E82FF49A274821F000E8147F /* Messages */,
+				E82FF49B274821FE00E8147F /* Launch */,
 			);
 			path = Views;
 			sourceTree = "<group>";

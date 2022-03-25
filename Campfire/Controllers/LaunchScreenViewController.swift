@@ -11,8 +11,6 @@ class LaunchScreenViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -22,10 +20,8 @@ class LaunchScreenViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(true)
         
-        
-        
         // Segue to navigation controller.
-        performSegue(withIdentifier: Constants.Segues.navigationController, sender: self)
+        performSegue(withIdentifier: Constants.Segues.launchToWelcome, sender: self)
     }
     
 

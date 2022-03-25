@@ -7,25 +7,11 @@
 
 import UIKit
 
-// TODO: Add ember animation
-
 class WelcomeViewController: UIViewController {
     
-    // MARK: - IBOutlets
-    
-    // ---------------------------------- //
-    // - - - - - - -  OUTLETS - - - - - - //
-    // ---------------------------------- //
-    
     @IBOutlet weak var campfireImage: UIImageView!
-    @IBOutlet weak var joinButton: UIButton!
-    @IBOutlet weak var loginButton: UIButton!
-    
-    // MARK: - Variables
-    
-    // ---------------------------------- //
-    // - - - - - - - - VARS - - - - - - - //
-    // ---------------------------------- //
+    @IBOutlet weak var joinWelcomeButton: UIButton!
+    @IBOutlet weak var loginWelcomeButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +19,8 @@ class WelcomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        
+        // Hide navigation bar.
         navigationController?.isNavigationBarHidden = true
-    }
-    
-    override func viewWillDisappear(_ animated: Bool) {
-        super.viewWillDisappear(true)
-        navigationController?.isNavigationBarHidden = false
     }
 }

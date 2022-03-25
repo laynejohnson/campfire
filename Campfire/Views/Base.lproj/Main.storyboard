@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7FR-sg-R8D">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="7FR-sg-R8D">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Image references" minToolsVersion="12.0"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -15,11 +15,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" userLabel="Welcome View Controller" customClass="WelcomeViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-2o-Dxk" userLabel="Button Stack View">
-                                <rect key="frame" x="178.5" y="598" width="57" height="88"/>
+                                <rect key="frame" x="178.5" y="654" width="57" height="88"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRH-MR-ViA">
                                         <rect key="frame" x="6.5" y="0.0" width="44" height="39"/>
@@ -51,11 +51,11 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="campfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="36N-Vf-Lsk">
-                                <rect key="frame" x="119" y="260.5" width="176" height="265"/>
+                                <rect key="frame" x="119" y="288.5" width="176" height="265"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" name="Off White"/>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.97647058823529409" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wsD-2o-Dxk" secondAttribute="bottom" constant="100" id="DTg-Qv-dw1"/>
                             <constraint firstItem="36N-Vf-Lsk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XZm-pK-Y3B"/>
@@ -66,8 +66,8 @@
                     <navigationItem key="navigationItem" id="aVM-aR-FiC"/>
                     <connections>
                         <outlet property="campfireImage" destination="36N-Vf-Lsk" id="2AP-dC-oFW"/>
-                        <outlet property="joinButton" destination="CRH-MR-ViA" id="ore-tF-evo"/>
-                        <outlet property="loginButton" destination="KRA-zL-dJS" id="Z6v-1z-PMD"/>
+                        <outlet property="joinWelcomeButton" destination="CRH-MR-ViA" id="ore-tF-evo"/>
+                        <outlet property="loginWelcomeButton" destination="KRA-zL-dJS" id="Z6v-1z-PMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -79,11 +79,11 @@
             <objects>
                 <viewController id="O2o-Bf-k5F" customClass="JoinViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qW-i9-KRi" userLabel="Main View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zat-UM-lLR" userLabel="Main Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="734"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="734"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GdA-zx-Wzy" userLabel="Logo View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="299.5"/>
@@ -183,7 +183,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ohq-zz-5bp"/>
-                        <color key="backgroundColor" name="Off White"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="zat-UM-lLR" firstAttribute="leading" secondItem="Ohq-zz-5bp" secondAttribute="leading" id="0Zh-6F-kIE"/>
                             <constraint firstItem="zat-UM-lLR" firstAttribute="top" secondItem="Ohq-zz-5bp" secondAttribute="top" id="8AG-cF-n1q"/>
@@ -194,8 +194,8 @@
                     <navigationItem key="navigationItem" id="Oqq-fI-n6i"/>
                     <connections>
                         <outlet property="emailTextField" destination="izr-uF-MoE" id="tSD-Ib-Q3k"/>
-                        <outlet property="guideLabel" destination="XLj-wL-h47" id="4Rp-bE-Fse"/>
                         <outlet property="joinButton" destination="zK6-ne-fCH" id="md1-4z-MqT"/>
+                        <outlet property="notificationLabel" destination="XLj-wL-h47" id="4Rp-bE-Fse"/>
                         <outlet property="passwordTextField" destination="f1w-la-TQI" id="PRT-JN-yXL"/>
                         <segue destination="svR-Mr-HdG" kind="show" identifier="Join" id="DGC-cf-qpa"/>
                     </connections>
@@ -209,11 +209,11 @@
             <objects>
                 <viewController id="932-yJ-Eof" userLabel="Login View Controller" customClass="LoginViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="e1y-tv-lV5" userLabel="Main View">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="wod-Nw-VMY" userLabel="Main Stack View">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="786"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="786"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UPF-fe-z58" userLabel="Logo View">
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="322"/>
@@ -336,18 +336,18 @@
             <objects>
                 <viewController id="svR-Mr-HdG" userLabel="Chat View Controller" customClass="ChatViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Stl-os-ITs">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" keyboardDismissMode="onDrag" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="c7m-wD-gmb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="666"/>
+                                <rect key="frame" x="0.0" y="56" width="414" height="666"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="separatorColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RO-Sv-GZ3" userLabel="Lower View">
-                                <rect key="frame" x="0.0" y="666" width="414" height="120"/>
+                                <rect key="frame" x="0.0" y="722" width="414" height="120"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="456-Oj-apU">
                                         <rect key="frame" x="20" y="37.5" width="374" height="45"/>
@@ -436,7 +436,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
-                        <segue destination="ClM-Ff-iov" kind="show" identifier="ToNavigationController" id="tRu-Mo-SyO"/>
+                        <segue destination="ClM-Ff-iov" kind="show" identifier="ToWelcome" id="tRu-Mo-SyO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4YU-Od-XbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -449,11 +449,12 @@
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="ClM-Ff-iov" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Campfire Chat" id="Xp4-I6-6QK"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="bl8-tK-Wb2">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="bl8-tK-Wb2">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <color key="barTintColor" name="Off White"/>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="barTintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                             <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -472,12 +473,10 @@
     <inferredMetricsTieBreakers>
         <segue reference="FHS-J3-Um3"/>
     </inferredMetricsTieBreakers>
+    <color key="tintColor" systemColor="labelColor"/>
     <resources>
         <image name="Group" width="478" height="478"/>
         <image name="campfire_logo" width="176" height="265"/>
-        <namedColor name="Off White">
-            <color red="0.97600001096725464" green="0.97600001096725464" blue="0.97600001096725464" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

@@ -21,7 +21,6 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         
         // Test messages
         //        Message(sender: Constants.testChatter1, body: "Hello, friend"),
-        //        Message(sender: Constants.testChatter2, body: "Hello, dear friend")
         
     ]
     

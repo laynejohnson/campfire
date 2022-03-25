@@ -33,6 +33,12 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // Show navigation bar.
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     // MARK: - UITextFieldDelegate Functions
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
@@ -54,7 +60,7 @@ class LoginViewController: UIViewController, UITextFieldDelegate {
                     self.guideMessage.text = String(e.localizedDescription)
                 } else {
                     print("User logged in successfuly.")
-                    self.performSegue(withIdentifier: Constants.Segues.loginSegue, sender: self)
+                    self.performSegue(withIdentifier: Constants.Segues.loginToChat, sender: self)
                 }
             }
         }
