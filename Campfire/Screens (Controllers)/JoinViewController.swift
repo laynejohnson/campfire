@@ -46,6 +46,7 @@ class JoinViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
+    // Move func once finished.
     func handleError(errorCode: AuthErrorCode, label: UILabel) {
         switch errorCode {
         case .invalidEmail:
@@ -75,13 +76,12 @@ class JoinViewController: UIViewController {
     
     @IBAction func joinButtonPressed(_ sender: UIButton) {
         
-        // Email and password fields are empty.
+        // If email and password fields are empty, display notification.
         if !emailTextField.hasText && !passwordTextField.hasText {
             print("Please enter a valid email address and password to join Campfire.")
             
             // Set notification label.
             DispatchQueue.main.async {
-                // Set notification label.
                 self.notificationLabel.text = "Please enter a valid email address and password to join Campfire."
             }
         } else {
@@ -97,9 +97,13 @@ class JoinViewController: UIViewController {
                         }
                     } else {
                         print("User created successfully!")
+                        
                         DispatchQueue.main.async {
                             // Set notification label.
-                            self.notificationLabel.text = "Welcome to Campfire! 👋"
+                            self.notificationLabel.text = "Welcome to Campfire 👋"
+                        }
+                        
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                             // Segue to chat.
                             self.performSegue(withIdentifier: Constants.Segues.joinToChat, sender: self)
                         }
@@ -116,30 +120,36 @@ extension JoinViewController: UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.placeholder = ""
+        
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
         
+        // Email and text field are valid.
+        if emailTextField.text!.isValidEmail && passwordTextField.text!.isValidPassword {
+            notificationLabel.text = "Email ✅ Password ✅ "
+        }
+        
         // Email text field validation.
         if textField == emailTextField {
-            
-            if !emailTextField.text!.isValidEmail {
+            if emailTextField.text != nil && !emailTextField.text!.isValidEmail {
                 print("Not a valid email address.")
                 
                 // Set notification label.
-                DispatchQueue.main.async {
-                    // Set notification label.
-                    self.notificationLabel.text = "Please enter a valid email address."
-                }
-            } else {
-                print("That looks like a valid email address.")
-                // Show symbol.
+                notificationLabel.text = "Please enter a valid email address."
+                
+            } else if emailTextField.text != nil && emailTextField.text!.isValidEmail {
+                notificationLabel.text = "Email ✅"
+            }
+        }
+        
+        // Password text field validation.
+        if textField == passwordTextField {
+            if passwordTextField.text != nil && !passwordTextField.text!.isValidPassword {
+                print("Not a valid password.")
                 
                 // Set notification label.
-                DispatchQueue.main.async {
-                    // Set notification label.
-                    self.notificationLabel.text = ""
-                }
+                notificationLabel.text = "Please enter a valid password."
             }
         }
     }
