@@ -7,6 +7,7 @@
 
 import UIKit
 import Firebase
+import FirebaseAuth
 
 class JoinViewController: UIViewController {
     
@@ -45,29 +46,63 @@ class JoinViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
-     // TODO: Add error handling.
-//    func handleError(_ error: Error) {
-//
-//    }
-//
+    func handleError(errorCode: AuthErrorCode, label: UILabel) {
+        switch errorCode {
+        case .invalidEmail:
+            notificationLabel.text = "Please enter a valid email address."
+        case .wrongPassword:
+            notificationLabel.text = "Invalid email address or password."
+        case .userNotFound:
+            notificationLabel.text = "User not found. Try a different email address or sign up here."
+        case .networkError:
+            notificationLabel.text = "Network error"
+        case .emailAlreadyInUse:
+            notificationLabel.text = "That email address has already been registered."
+        case .weakPassword:
+            notificationLabel.text = "The password must be 6 characters long or more."
+        case .missingEmail:
+            notificationLabel.text = "Please enter a valid email address."
+        case .sessionExpired:
+            notificationLabel.text = "Session has expired."
+        case .unverifiedEmail:
+            notificationLabel.text = "Please check your email inbox to verify your email address and try again."
+        default:
+            notificationLabel.text = "Please enter a valid email address and password to join Campfire."
+        }
+    }
+    
     // MARK: - IBActions
     
     @IBAction func joinButtonPressed(_ sender: UIButton) {
         
-        // Firebase create user.
-        if let email = emailTextField.text, let password = passwordTextField.text {
-            Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
-                if let e = error {
-                    print(e.localizedDescription)
-                    print(e._code)
-//                    handleError(e._code)
-                } else {
-                    print("User created successfully!")
-                    DispatchQueue.main.async {
-                        // Set notification label.
-                        self.notificationLabel.text = "Welcome to Campfire! 👋"
-                        // Segue to chat.
-                        self.performSegue(withIdentifier: Constants.Segues.joinToChat, sender: self)
+        // Email and password fields are empty.
+        if !emailTextField.hasText && !passwordTextField.hasText {
+            print("Please enter a valid email address and password to join Campfire.")
+            
+            // Set notification label.
+            DispatchQueue.main.async {
+                // Set notification label.
+                self.notificationLabel.text = "Please enter a valid email address and password to join Campfire."
+            }
+        } else {
+            // Create user.
+            if let email = emailTextField.text, let password = passwordTextField.text {
+                Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
+                    if let error = error, let errorCode = AuthErrorCode(rawValue: error._code) {
+                        print(error)
+                        print(errorCode)
+                        // Handle error.
+                        DispatchQueue.main.async {
+                            self.handleError(errorCode: errorCode, label: self.notificationLabel)
+                        }
+                    } else {
+                        print("User created successfully!")
+                        DispatchQueue.main.async {
+                            // Set notification label.
+                            self.notificationLabel.text = "Welcome to Campfire! 👋"
+                            // Segue to chat.
+                            self.performSegue(withIdentifier: Constants.Segues.joinToChat, sender: self)
+                        }
                     }
                 }
             }
@@ -83,4 +118,29 @@ extension JoinViewController: UITextFieldDelegate {
         textField.placeholder = ""
     }
     
+    public func textFieldDidEndEditing(_ textField: UITextField) {
+        
+        // Email text field validation.
+        if textField == emailTextField {
+            
+            if !emailTextField.text!.isValidEmail {
+                print("Not a valid email address.")
+                
+                // Set notification label.
+                DispatchQueue.main.async {
+                    // Set notification label.
+                    self.notificationLabel.text = "Please enter a valid email address."
+                }
+            } else {
+                print("That looks like a valid email address.")
+                // Show symbol.
+                
+                // Set notification label.
+                DispatchQueue.main.async {
+                    // Set notification label.
+                    self.notificationLabel.text = ""
+                }
+            }
+        }
+    }
 }
