@@ -66,7 +66,7 @@ class JoinViewController: UIViewController {
         case .sessionExpired:
             notificationLabel.text = "Session has expired."
         case .unverifiedEmail:
-            notificationLabel.text = "Please check your email inbox to verify your email address and try again."
+            notificationLabel.text = "Please check your inbox to verify your email address and try again."
         default:
             notificationLabel.text = "Please enter a valid email address and password to join Campfire."
         }
