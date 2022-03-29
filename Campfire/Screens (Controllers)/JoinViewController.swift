@@ -27,7 +27,7 @@ class JoinViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
         
-        // Delegates.
+        // Set delegates.
         emailTextField.delegate = self
         passwordTextField.delegate = self
     }
@@ -42,8 +42,9 @@ class JoinViewController: UIViewController {
     
     @IBAction func joinButtonPressed(_ sender: UIButton) {
         
-        // Firebase create user.
         if let email = emailTextField.text, let password = passwordTextField.text {
+            
+            // Firebase create user.
             Auth.auth().createUser(withEmail: email, password: password) { authResult, error in
                 if let error = error, let errorCode = AuthErrorCode(rawValue: error._code) {
                     print(error)

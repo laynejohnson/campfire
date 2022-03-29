@@ -10,8 +10,8 @@ import Firebase
 
 class LoginViewController: UIViewController {
     
-    @IBOutlet weak var emailField: UITextField!
-    @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var notificationLabel: UILabel!
     
@@ -25,10 +25,10 @@ class LoginViewController: UIViewController {
         // Tap screen to dismiss keyboard.
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
-
-        // Delegates.
-        emailField.delegate = self
-        passwordField.delegate = self
+        
+        // Set delegates.
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,31 +37,31 @@ class LoginViewController: UIViewController {
         navigationController?.isNavigationBarHidden = false
     }
     
-
-    
-
-    
     // MARK: - IBActions
     
-    @IBAction func loginPressed(_ sender: UIButton) {
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-        // Firebase authentication. User account data lives in authResult
-        if let email = emailField.text, let password = passwordField.text {
+        if let email = emailTextField.text, let password = passwordTextField.text {
+            
+            // Firebase authenticate user.
             Auth.auth().signIn(withEmail: email, password: password) { authResult, error in
-                if let e = error {
-                    print(e.localizedDescription)
-              
-                    DispatchQueue.main.async {
-                        // Set notification label.
-                        self.notificationLabel.text = String(e.localizedDescription)
-                    }
+                if let error = error, let errorCode = AuthErrorCode(rawValue: error._code) {
+                    print(error)
+                    print(error.localizedDescription)
+                    
+                    // Handle error.
+                    self.handleError(errorCode: errorCode)
+                    
                 } else {
-                    print("User logged in successfuly.")
-                
+                    print("User logged in successfuly!")
+                    
+                    // Set notification label.
                     DispatchQueue.main.async {
-                        // Set notification label.
-                        self.notificationLabel.text = "Welcome back friend! 👋"
-                        // Segue to chat screen.
+                        self.notificationLabel.text = "Welcome back, friend! 👋"
+                    }
+                    
+                    // Segue to chat view.
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                         self.performSegue(withIdentifier: Constants.Segues.loginToChat, sender: self)
                     }
                 }
@@ -78,4 +78,65 @@ extension LoginViewController: UITextFieldDelegate {
         textField.placeholder = ""
     }
     
+}
+
+// MARK: - Error Handling
+
+extension LoginViewController {
+    
+    func handleError(errorCode: AuthErrorCode) {
+        print("This is the error handling function.")
+        
+        if emailTextField.text == "" && passwordTextField.text == "" {
+            DispatchQueue.main.async {
+                self.notificationLabel.text = "Please enter an email address and password to login."
+            }
+            
+        } else {
+            
+            switch errorCode {
+                
+            case .invalidCredential:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Please check email/password combination."
+                }
+            case .emailAlreadyInUse:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "That email address is already in use."
+                }
+            case .invalidEmail:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Please enter a valid email address."
+                }
+            case .wrongPassword:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Incorrect email or password."
+                }
+            case .userNotFound:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Hmmm...we can't seem to find that email address."
+                }
+            case .credentialAlreadyInUse:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Credential already in use."
+                }
+            case .weakPassword:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Password must be 6 characters long or more."
+                }
+            case .missingEmail:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Please enter a valid email address."
+                }
+            case .unverifiedEmail:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Please verify your email address and try again."
+                }
+            default:
+                DispatchQueue.main.async {
+                    self.notificationLabel.text = "Please enter an email address and password to login."
+                }
+            }
+        }
+    }
 }
