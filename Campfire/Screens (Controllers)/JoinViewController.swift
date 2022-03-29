@@ -16,14 +16,6 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var notificationLabel: UILabel!
     
-    var isEmailEntered: Bool {
-        return emailTextField.text!.isEmpty
-    }
-    
-    var isPasswordEntered: Bool {
-        return passwordTextField.text!.isEmpty
-    }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -65,7 +57,7 @@ class JoinViewController: UIViewController {
                     
                     // Set notification label.
                     DispatchQueue.main.async {
-                        self.notificationLabel.text = "Welcome to Campfire 👋"
+                        self.notificationLabel.text = "Welcome to Campfire! 👋"
                     }
                     
                     // Segue to chat view.
@@ -84,15 +76,15 @@ extension JoinViewController: UITextFieldDelegate {
     
     public func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.placeholder = ""
-        
     }
     
     public func textFieldDidEndEditing(_ textField: UITextField) {
         
+        // Email text field.
         if textField == emailTextField {
             
             if textField.text != "" && emailTextField.text!.isValidEmail {
-                notificationLabel.text = "Email ✅"
+                notificationLabel.text = "Email looks good ✅"
             }
         }
     }
