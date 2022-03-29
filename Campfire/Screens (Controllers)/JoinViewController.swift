@@ -9,6 +9,10 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
+ // TODO: Enable return key for all text boxes
+ // TODO: UI updates
+ // TODO: Light/dark mode
+
 class JoinViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
