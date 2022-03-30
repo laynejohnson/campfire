@@ -11,9 +11,9 @@ import Firebase
 
  // TODO: Send should scroll view to top
  // TODO: Add choose your avatar
+ // TODO: Send icon inside of text field
 
-
-class ChatViewController: UIViewController, UITextFieldDelegate {
+class ChatViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
@@ -129,7 +129,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     }
 }
 
-// MARK: - Table View Delegate Functions
+// MARK: - UITableViewDataSource Extension
 
 extension ChatViewController: UITableViewDataSource {
     
@@ -161,4 +161,10 @@ extension ChatViewController: UITableViewDataSource {
         }
         return cell
     }
+}
+
+// MARK: - UITextField Extension
+
+extension ChatViewController: UITextFieldDelegate {
+
 }

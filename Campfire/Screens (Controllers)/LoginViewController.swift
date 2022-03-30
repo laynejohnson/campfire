@@ -29,6 +29,8 @@ class LoginViewController: UIViewController {
         // Set delegates.
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        loginButton.styleButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {

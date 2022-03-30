@@ -10,6 +10,7 @@
 		1831D4ACAB0983199DB0AF05 /* Pods_Campfire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14B9ACDCFDE6808F880C122D /* Pods_Campfire.framework */; };
 		E801124726B5906600D0BE4B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E801124626B5906600D0BE4B /* Constants.swift */; };
 		E801124926B59B5F00D0BE4B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = E801124826B59B5F00D0BE4B /* Message.swift */; };
+		E827F62227F4B16B00B6D062 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827F62127F4B16B00B6D062 /* UIButton+Ext.swift */; };
 		E82FF49D2748221E00E8147F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FF49C2748221E00E8147F /* LaunchScreenViewController.swift */; };
 		E847B73727EE308E00E3704C /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B73627EE308E00E3704C /* String+Ext.swift */; };
 		E847B73927EE3CFF00E3704C /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B73827EE3CFF00E3704C /* UIViewController+Ext.swift */; };
@@ -33,6 +34,7 @@
 		68C204D5AF6B8228BE8F9AC3 /* Pods-Campfire.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Campfire.debug.xcconfig"; path = "Target Support Files/Pods-Campfire/Pods-Campfire.debug.xcconfig"; sourceTree = "<group>"; };
 		E801124626B5906600D0BE4B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E801124826B59B5F00D0BE4B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		E827F62127F4B16B00B6D062 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		E82FF49C2748221E00E8147F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		E847B73627EE308E00E3704C /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
 		E847B73827EE3CFF00E3704C /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
@@ -104,6 +106,7 @@
 			children = (
 				E847B73627EE308E00E3704C /* String+Ext.swift */,
 				E847B73827EE3CFF00E3704C /* UIViewController+Ext.swift */,
+				E827F62127F4B16B00B6D062 /* UIButton+Ext.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				E8CDC9B126B19C0B004518D0 /* LoginViewController.swift in Sources */,
 				E8CDC9B326B19C1C004518D0 /* ChatViewController.swift in Sources */,
 				E8CDC9AF26B19BCD004518D0 /* JoinViewController.swift in Sources */,
+				E827F62227F4B16B00B6D062 /* UIButton+Ext.swift in Sources */,
 				E82FF49D2748221E00E8147F /* LaunchScreenViewController.swift in Sources */,
 				E801124726B5906600D0BE4B /* Constants.swift in Sources */,
 				E847B73727EE308E00E3704C /* String+Ext.swift in Sources */,

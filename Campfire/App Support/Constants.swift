@@ -6,13 +6,17 @@
 //
 
 import Foundation
+import UIKit
 
 struct Constants {
     
     static let appName = "Campfire"
+    
+    // Custom views.
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
 
+    // Testing variables.
     static let chatter1 = "hello@campfire.com"
     static let chatter2 = "helloo@campfire.com"
     static let chatter3 = "hellooo@campfire.com"

@@ -34,6 +34,9 @@ class JoinViewController: UIViewController {
         // Set delegates.
         emailTextField.delegate = self
         passwordTextField.delegate = self
+        
+        joinButton.styleButton()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

@@ -17,8 +17,8 @@ class WelcomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        configureButton(button: joinButton)
-        configureButton(button: loginButton)
+        joinButton.styleButton()
+        loginButton.styleButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -27,11 +27,4 @@ class WelcomeViewController: UIViewController {
         // Hide navigation bar.
         navigationController?.isNavigationBarHidden = true
     }
-    
-    private func configureButton(button: UIButton) {
-        button.layer.cornerRadius = 8
-        button.backgroundColor = .systemIndigo
-    }
-    
-    
 }
