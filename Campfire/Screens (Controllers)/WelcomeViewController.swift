@@ -10,12 +10,15 @@ import UIKit
 class WelcomeViewController: UIViewController {
     
     @IBOutlet weak var campfireImage: UIImageView!
-    @IBOutlet weak var joinWelcomeButton: UIButton!
-    @IBOutlet weak var loginWelcomeButton: UIButton!
+    @IBOutlet weak var joinButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureButton(button: joinButton)
+        configureButton(button: loginButton)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -24,4 +27,11 @@ class WelcomeViewController: UIViewController {
         // Hide navigation bar.
         navigationController?.isNavigationBarHidden = true
     }
+    
+    private func configureButton(button: UIButton) {
+        button.layer.cornerRadius = 8
+        button.backgroundColor = .systemIndigo
+    }
+    
+    
 }

@@ -18,22 +18,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-2o-Dxk" userLabel="Button Stack View">
-                                <rect key="frame" x="178.5" y="654" width="57" height="88"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="wsD-2o-Dxk" userLabel="Button Stack View">
+                                <rect key="frame" x="50" y="353.5" width="314" height="135"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRH-MR-ViA">
-                                        <rect key="frame" x="6.5" y="0.0" width="44" height="39"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="BS3-md-wEI"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Join"/>
                                         <connections>
                                             <segue destination="O2o-Bf-k5F" kind="show" id="JOz-hS-l2x"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-zL-dJS">
-                                        <rect key="frame" x="0.0" y="49" width="57" height="39"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <rect key="frame" x="0.0" y="75" width="314" height="60"/>
+                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="C3e-Af-u0H"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                         <state key="normal" title="Login">
                                             <color key="titleColor" systemColor="labelColor"/>
                                         </state>
@@ -44,28 +50,26 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstItem="KRA-zL-dJS" firstAttribute="centerX" secondItem="wsD-2o-Dxk" secondAttribute="centerX" id="tNV-rQ-7qh"/>
-                                    <constraint firstItem="CRH-MR-ViA" firstAttribute="centerX" secondItem="wsD-2o-Dxk" secondAttribute="centerX" id="wt3-Qh-bqK"/>
+                                    <constraint firstItem="CRH-MR-ViA" firstAttribute="leading" secondItem="wsD-2o-Dxk" secondAttribute="leading" id="OdF-yc-Y31"/>
+                                    <constraint firstAttribute="trailing" secondItem="KRA-zL-dJS" secondAttribute="trailing" id="mtH-9w-L7p"/>
+                                    <constraint firstItem="KRA-zL-dJS" firstAttribute="leading" secondItem="wsD-2o-Dxk" secondAttribute="leading" id="nB1-35-BBR"/>
+                                    <constraint firstAttribute="trailing" secondItem="CRH-MR-ViA" secondAttribute="trailing" id="oR1-YC-N9M"/>
                                 </constraints>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" image="campfire_logo" translatesAutoresizingMaskIntoConstraints="NO" id="36N-Vf-Lsk">
-                                <rect key="frame" x="119" y="288.5" width="176" height="265"/>
-                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wsD-2o-Dxk" secondAttribute="bottom" constant="100" id="DTg-Qv-dw1"/>
-                            <constraint firstItem="36N-Vf-Lsk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XZm-pK-Y3B"/>
-                            <constraint firstItem="36N-Vf-Lsk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gxn-IU-j2z"/>
-                            <constraint firstItem="wsD-2o-Dxk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xbP-tG-t1U"/>
+                            <constraint firstItem="wsD-2o-Dxk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="DXT-cG-UeH"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wsD-2o-Dxk" secondAttribute="trailing" constant="50" id="UUL-Hh-fbn"/>
+                            <constraint firstItem="wsD-2o-Dxk" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="jTt-1o-oyN"/>
+                            <constraint firstItem="wsD-2o-Dxk" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qhN-LR-JPr"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="aVM-aR-FiC"/>
                     <connections>
-                        <outlet property="campfireImage" destination="36N-Vf-Lsk" id="2AP-dC-oFW"/>
-                        <outlet property="joinWelcomeButton" destination="CRH-MR-ViA" id="ore-tF-evo"/>
-                        <outlet property="loginWelcomeButton" destination="KRA-zL-dJS" id="Z6v-1z-PMD"/>
+                        <outlet property="joinButton" destination="CRH-MR-ViA" id="ore-tF-evo"/>
+                        <outlet property="loginButton" destination="KRA-zL-dJS" id="Z6v-1z-PMD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -338,7 +342,7 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-Qy-L2r" userLabel="Message Field">
                                                 <rect key="frame" x="0.0" y="0.0" width="319" height="45"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
@@ -465,6 +469,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

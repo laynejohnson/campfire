@@ -9,19 +9,26 @@ import Foundation
 import UIKit
 import Firebase
 
+ // TODO: Send should scroll view to top
+ // TODO: Add choose your avatar
+
+
 class ChatViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
+    // Initialize database.
     let db = Firestore.firestore()
     
+    // Test messages.
     var messages: [Message] = [
         
-        // Test messages
-        //        Message(sender: Constants.testChatter1, body: "Hello, friend"),
-        
+        Message(sender: Constants.chatter1, body: "Hey guys!"),
+        Message(sender: Constants.chatter2, body: "Should I bring the marshmallows??"),
+        Message(sender: Constants.chatter1, body: "Yaaaas 👏"),
+        Message(sender: Constants.chatter3, body: "I'll bring the firewood!"),
     ]
     
     override func viewDidLoad() {
@@ -54,21 +61,20 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
                 
                 self.messages = []
                 
-                if let e = error {
-                    
-                    print("There was a problem retrieving data from Firestore: \(e)")
+                if let error = error {
+                    print("There was a problem retrieving data from Firestore: \(error)")
                     
                 } else {
-                    
                     if let snapshotDocuments = querySnapshot?.documents {
+                        
                         for doc in snapshotDocuments {
+                            
                             let data = doc.data()
                             if let sender = data[Constants.FStore.senderField] as? String, let messageBody = data[Constants.FStore.bodyField] as? String {
                                 let newMessage = Message(sender: sender, body: messageBody)
                                 self.messages.append(newMessage)
                                 
-                                // Fetch main thread:
-                                // Process happens in a closure (process happens in background); main thread must be fetched (process happening in foreground
+                                // Update UI.
                                 DispatchQueue.main.async {
                                     self.tableView.reloadData()
                                     let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
@@ -83,7 +89,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBActions
     
-    @IBAction func logOutPressed(_ sender: UIBarButtonItem) {
+    @IBAction func logOutButtonPressed(_ sender: UIBarButtonItem) {
         
         let firebaseAuth = Auth.auth()
         
@@ -96,8 +102,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    
-    @IBAction func sendPressed(_ sender: Any) {
+    @IBAction func sendButtonPressed(_ sender: Any) {
         
         if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
             
@@ -107,13 +112,12 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
                 Constants.FStore.dateField: Date().timeIntervalSince1970
             ]) { (error) in
                 if let e = error {
-                    
                     print("There was a problem saving data to Firestore: \(e)")
                     
                 } else {
-                    
                     print("Data saved successfully")
-                    // Use DispatchQueue to target main thread when inside closure.
+                    
+                   // Update UI.
                     DispatchQueue.main.async {
                         self.messageTextField.text = ""
                         let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
@@ -123,7 +127,7 @@ class ChatViewController: UIViewController, UITextFieldDelegate {
             }
         }
     }
-} // End ChatViewController
+}
 
 // MARK: - Table View Delegate Functions
 

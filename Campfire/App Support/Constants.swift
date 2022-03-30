@@ -13,8 +13,9 @@ struct Constants {
     static let cellIdentifier = "ReusableCell"
     static let cellNibName = "MessageCell"
 
-    static let testChatter1 = "hello@campfire.com"
-    static let testChatter2 = "helloback@campfire.com"
+    static let chatter1 = "hello@campfire.com"
+    static let chatter2 = "helloo@campfire.com"
+    static let chatter3 = "hellooo@campfire.com"
     static let testPassword = "123456"
     
     struct Segues {
