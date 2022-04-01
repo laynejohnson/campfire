@@ -8,7 +8,10 @@
 import UIKit
 
 class LaunchScreenViewController: UIViewController {
-
+    
+    // For launch screen animations:
+    // Setup launch screen storyboard view and add animations here.
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,8 +24,8 @@ class LaunchScreenViewController: UIViewController {
         super.viewDidAppear(true)
         
         // Segue to navigation controller.
-        performSegue(withIdentifier: Constants.Segues.launchToWelcome, sender: self)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.performSegue(withIdentifier: Constants.Segues.launchToWelcome, sender: self)
+        }
     }
-    
-
 }

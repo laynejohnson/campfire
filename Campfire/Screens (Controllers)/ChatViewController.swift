@@ -10,8 +10,7 @@ import UIKit
 import Firebase
 
  // TODO: Send should scroll view to top
- // TODO: Add choose your avatar
- // TODO: Send icon inside of text field
+ // TODO: Add line above compose view
 
 class ChatViewController: UIViewController {
     
@@ -25,10 +24,10 @@ class ChatViewController: UIViewController {
     // Test messages.
     var messages: [Message] = [
         
-        Message(sender: Constants.chatter1, body: "Hey guys!"),
+        Message(sender: Constants.chatter1, body: "Hello friends!"),
         Message(sender: Constants.chatter2, body: "Should I bring the marshmallows??"),
         Message(sender: Constants.chatter1, body: "Yaaaas 👏"),
-        Message(sender: Constants.chatter3, body: "I'll bring the firewood!"),
+        Message(sender: Constants.chatter3, body: "I've got the firewood!"),
     ]
     
     override func viewDidLoad() {

@@ -9,9 +9,9 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
- // TODO: Enable return key for all text boxes
- // TODO: UI updates
- // TODO: Light/dark mode
+// TODO: Enable return key for all text boxes
+// TODO: UI updates
+// TODO: Light/dark mode
 
 class JoinViewController: UIViewController {
     
@@ -25,7 +25,8 @@ class JoinViewController: UIViewController {
         super.viewDidLoad()
         
         // Notification label (validation/errors).
-        notificationLabel.text = ""
+        notificationLabel.text = "Enter an email address and password to join Campfire ⛺️"
+        notificationLabel.textColor = UIColor(named: "Tuatara")
         
         // Tap screen to dismiss keyboard.
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
@@ -35,6 +36,7 @@ class JoinViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
+        // Configure UI.
         joinButton.styleButton()
         
     }
@@ -47,7 +49,7 @@ class JoinViewController: UIViewController {
     
     // MARK: - IBActions
     
-    @IBAction func joinButtonPressed(_ sender: UIButton) {
+    @IBAction func joinButtonPressed(_ sender: UIButton?) {
         
         if let email = emailTextField.text, let password = passwordTextField.text {
             
@@ -86,16 +88,19 @@ extension JoinViewController: UITextFieldDelegate {
         textField.placeholder = ""
     }
     
-    public func textFieldDidEndEditing(_ textField: UITextField) {
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         
-        // Email text field.
-        if textField == emailTextField {
-            
-            if textField.text != "" && emailTextField.text!.isValidEmail {
-                notificationLabel.text = "Email looks good ✅"
-            }
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            joinButtonPressed(nil)
         }
+        return false
     }
+    
 }
 
 // MARK: - Error Handling
@@ -106,11 +111,15 @@ extension JoinViewController {
         print("This is the error handling function.")
         
         if emailTextField.text == "" && passwordTextField.text == "" {
-            DispatchQueue.main.async {
+            DispatchQueue.main.async { [self] in
                 self.notificationLabel.text = "Please enter an email address and password to join Campfire ⛺️"
+                self.notificationLabel.textColor = UIColor(named: "Campfire")
             }
             
         } else {
+            
+            // Set notification label color.
+            self.notificationLabel.textColor = UIColor(named: "Campfire")
             
             switch errorCode {
                 

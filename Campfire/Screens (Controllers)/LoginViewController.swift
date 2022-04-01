@@ -20,7 +20,8 @@ class LoginViewController: UIViewController {
         super.viewDidLoad()
         
         // Notification label (validation/errors).
-        notificationLabel.text = ""
+        notificationLabel.text = "Enter an email address and password to login ⛺️"
+        notificationLabel.textColor = UIColor(named: "Tuatara")
         
         // Tap screen to dismiss keyboard.
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
@@ -30,6 +31,7 @@ class LoginViewController: UIViewController {
         emailTextField.delegate = self
         passwordTextField.delegate = self
         
+        // Configure UI.
         loginButton.styleButton()
     }
     
@@ -41,7 +43,7 @@ class LoginViewController: UIViewController {
     
     // MARK: - IBActions
     
-    @IBAction func loginButtonPressed(_ sender: UIButton) {
+    @IBAction func loginButtonPressed(_ sender: UIButton?) {
         
         if let email = emailTextField.text, let password = passwordTextField.text {
             
@@ -80,6 +82,19 @@ extension LoginViewController: UITextFieldDelegate {
         textField.placeholder = ""
     }
     
+    public func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        // Try to find next responder
+        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
+            nextField.becomeFirstResponder()
+        } else {
+            // Not found, so remove keyboard.
+            textField.resignFirstResponder()
+            loginButtonPressed(nil)
+        }
+        return false
+    }
+    
 }
 
 // MARK: - Error Handling
@@ -91,10 +106,14 @@ extension LoginViewController {
         
         if emailTextField.text == "" && passwordTextField.text == "" {
             DispatchQueue.main.async {
+                self.notificationLabel.textColor = UIColor(named: "Campfire")
                 self.notificationLabel.text = "Please enter an email address and password to login."
             }
             
         } else {
+            
+            // Set notification label color.
+            self.notificationLabel.textColor = UIColor(named: "Campfire")
             
             switch errorCode {
                 

@@ -22,6 +22,16 @@ struct Constants {
     static let chatter3 = "hellooo@campfire.com"
     static let testPassword = "123456"
     
+    struct Colors {
+        
+        static let jakarta = UIColor(named: "Jakarta")
+        static let campfireWhite = UIColor(named: "CampfireWhite")
+        static let tuatara = UIColor(named: "Tuatara")
+        static let merlin = UIColor(named: "Merlin")
+        static let smoke = UIColor(named: "Smoke")
+        static let campfire = UIColor(named: "Campfire")
+    }
+    
     struct Segues {
         
         static let launchToWelcome = "ToWelcome"

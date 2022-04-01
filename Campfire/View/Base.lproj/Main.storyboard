@@ -11,6 +11,47 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Launch Screen View Controller-->
+        <scene sceneID="WXt-nl-N4E">
+            <objects>
+                <viewController id="7FR-sg-R8D" customClass="LaunchScreenViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="F5p-mu-LXb" userLabel="Main View">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hBk-fK-alb">
+                                <rect key="frame" x="87" y="298" width="240.5" height="300.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CampfireTuatara" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-Oo-K63" userLabel="Campfire Image">
+                                        <rect key="frame" x="0.0" y="0.0" width="240.5" height="211"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfR-JK-Ka1" userLabel="Campfire Label">
+                                        <rect key="frame" x="0.0" y="236" width="240.5" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="54"/>
+                                        <color key="textColor" name="Tuatara"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="cfR-JK-Ka1" firstAttribute="centerX" secondItem="hBk-fK-alb" secondAttribute="centerX" id="iTr-Uj-MBq"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="q7p-7r-gDh"/>
+                        <color key="backgroundColor" name="CampfireWhite"/>
+                        <constraints>
+                            <constraint firstItem="hBk-fK-alb" firstAttribute="centerX" secondItem="F5p-mu-LXb" secondAttribute="centerX" id="0Xj-Zb-Ruh"/>
+                            <constraint firstItem="hBk-fK-alb" firstAttribute="centerY" secondItem="F5p-mu-LXb" secondAttribute="centerY" id="dBm-IP-qff"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="ClM-Ff-iov" kind="show" identifier="ToWelcome" id="tRu-Mo-SyO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4YU-Od-XbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-558" y="461"/>
+        </scene>
         <!--Welcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
@@ -20,15 +61,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Bpu-uu-6Cy" userLabel="Logo Stack View">
-                                <rect key="frame" x="111" y="276" width="192.5" height="290"/>
+                                <rect key="frame" x="87" y="271" width="240.5" height="300.5"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campfire" translatesAutoresizingMaskIntoConstraints="NO" id="fGI-0s-5hn">
-                                        <rect key="frame" x="0.0" y="0.0" width="192.5" height="211"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CampfireTuatara" translatesAutoresizingMaskIntoConstraints="NO" id="fGI-0s-5hn">
+                                        <rect key="frame" x="0.0" y="0.0" width="240.5" height="211"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yd-Ny-nQN">
-                                        <rect key="frame" x="0.0" y="236" width="192.5" height="54"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                        <nil key="textColor"/>
+                                        <rect key="frame" x="0.0" y="236" width="240.5" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="54"/>
+                                        <color key="textColor" name="Tuatara"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -41,7 +82,7 @@
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CRH-MR-ViA">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
-                                        <color key="backgroundColor" red="0.090196078431372548" green="0.078431372549019607" blue="0.29019607843137252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.28235294117647058" green="0.2196078431372549" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="BS3-md-wEI"/>
                                         </constraints>
@@ -56,7 +97,7 @@
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRA-zL-dJS">
                                         <rect key="frame" x="0.0" y="80" width="314" height="60"/>
-                                        <color key="backgroundColor" red="0.09072399884" green="0.07710958272" blue="0.28838098049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.28235294117647058" green="0.2196078431372549" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="C3e-Af-u0H"/>
                                         </constraints>
@@ -100,35 +141,42 @@
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="460.71428571428567"/>
         </scene>
-        <!--Join-->
+        <!--Join View Controller-->
         <scene sceneID="0Zb-ur-8eZ">
             <objects>
-                <viewController id="O2o-Bf-k5F" customClass="JoinViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="O2o-Bf-k5F" userLabel="Join View Controller" customClass="JoinViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4qW-i9-KRi" userLabel="Main View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please choose a password with &gt; 6 characters." textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="XLj-wL-h47" userLabel="Notification Label">
-                                <rect key="frame" x="50" y="275.5" width="314" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-NU-3fv" userLabel="Campfire Label">
+                                <rect key="frame" x="87" y="179.5" width="240.5" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="54"/>
+                                <color key="textColor" name="Tuatara"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-eL-Hid" userLabel="Text Field Stack View">
-                                <rect key="frame" x="50" y="353.5" width="314" height="135"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter an email address and password to join Campfire ⛺️" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="XLj-wL-h47" userLabel="Notification Label">
+                                <rect key="frame" x="50" y="283.5" width="314" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.70980392156862748" green="0.3411764705882353" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13.75" translatesAutoresizingMaskIntoConstraints="NO" id="l3X-eL-Hid" userLabel="Text Field Stack View">
+                                <rect key="frame" x="50" y="354" width="314" height="134"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="izr-uF-MoE" userLabel="Email Field">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="izr-uF-MoE" userLabel="Email Text Field">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" name="Tuatara"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="QoV-1z-w01"/>
                                         </constraints>
+                                        <color key="textColor" name="Tuatara"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-la-TQI" userLabel="Password Field">
-                                        <rect key="frame" x="0.0" y="75" width="314" height="60"/>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-la-TQI" userLabel="Password Text Field">
+                                        <rect key="frame" x="0.0" y="74" width="314" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <constraints>
@@ -147,8 +195,8 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zK6-ne-fCH" userLabel="Join Button">
-                                <rect key="frame" x="50" y="510.5" width="314" height="60"/>
-                                <color key="backgroundColor" name="Jacarta"/>
+                                <rect key="frame" x="50" y="510" width="314" height="60"/>
+                                <color key="backgroundColor" red="0.28235294117647058" green="0.2196078431372549" blue="0.66274509803921566" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="6me-WM-9LH"/>
                                 </constraints>
@@ -160,21 +208,32 @@
                                     <action selector="joinButtonPressed:" destination="O2o-Bf-k5F" eventType="touchUpInside" id="Nw1-8n-mpq"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="CampfireTuatara" translatesAutoresizingMaskIntoConstraints="NO" id="zN3-dR-ZaC" userLabel="Campfire Footer Image">
+                                <rect key="frame" x="160" y="674" width="94" height="118"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="96" id="o5U-wb-8fY"/>
+                                    <constraint firstAttribute="width" constant="76" id="o9k-gB-LHT"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Ohq-zz-5bp"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Ohq-zz-5bp" firstAttribute="trailing" secondItem="l3X-eL-Hid" secondAttribute="trailing" constant="50" id="GgN-r8-ltg"/>
+                            <constraint firstItem="zN3-dR-ZaC" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="K7q-P5-fqt"/>
                             <constraint firstItem="l3X-eL-Hid" firstAttribute="leading" secondItem="Ohq-zz-5bp" secondAttribute="leading" constant="50" id="Kgu-lg-sCV"/>
                             <constraint firstItem="zK6-ne-fCH" firstAttribute="top" secondItem="l3X-eL-Hid" secondAttribute="bottom" constant="22" id="LvI-MZ-dvL"/>
                             <constraint firstItem="XLj-wL-h47" firstAttribute="leading" secondItem="4qW-i9-KRi" secondAttribute="leading" constant="50" id="N76-Iv-pCg"/>
                             <constraint firstItem="l3X-eL-Hid" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="NQR-cD-UUl"/>
                             <constraint firstItem="l3X-eL-Hid" firstAttribute="centerY" secondItem="4qW-i9-KRi" secondAttribute="centerY" id="RAh-Op-WfJ"/>
+                            <constraint firstItem="Ohq-zz-5bp" firstAttribute="bottom" secondItem="zN3-dR-ZaC" secondAttribute="bottom" constant="50" id="RLQ-1t-7fl"/>
                             <constraint firstItem="zK6-ne-fCH" firstAttribute="leading" secondItem="Ohq-zz-5bp" secondAttribute="leading" constant="50" id="TJ9-5r-iCX"/>
                             <constraint firstItem="XLj-wL-h47" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="XBW-fh-taK"/>
-                            <constraint firstItem="l3X-eL-Hid" firstAttribute="top" secondItem="XLj-wL-h47" secondAttribute="bottom" constant="30" id="Z0Z-V4-Yko"/>
+                            <constraint firstItem="l3X-eL-Hid" firstAttribute="top" secondItem="XLj-wL-h47" secondAttribute="bottom" constant="27.5" id="Z0Z-V4-Yko"/>
                             <constraint firstItem="Ohq-zz-5bp" firstAttribute="trailing" secondItem="zK6-ne-fCH" secondAttribute="trailing" constant="50" id="fYr-rf-pG1"/>
                             <constraint firstAttribute="trailing" secondItem="XLj-wL-h47" secondAttribute="trailing" constant="50" id="hQk-ff-8ax"/>
+                            <constraint firstItem="l3X-eL-Hid" firstAttribute="top" secondItem="5Lh-NU-3fv" secondAttribute="bottom" constant="110" id="kJI-Ag-Liw"/>
+                            <constraint firstItem="5Lh-NU-3fv" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="l0K-pS-80p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Join" id="Oqq-fI-n6i"/>
@@ -198,8 +257,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Fc-r2N" userLabel="Text Field Stack View">
-                                <rect key="frame" x="50" y="353.5" width="314" height="135"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phg-xW-b3A" userLabel="Campfire Label">
+                                <rect key="frame" x="87" y="179.5" width="240.5" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="54"/>
+                                <color key="textColor" name="Tuatara"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter an email address and password to login ⛺️" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="NLV-Tk-kA2" userLabel="Notification Label">
+                                <rect key="frame" x="50" y="289" width="314" height="43"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.70980392156862748" green="0.3411764705882353" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="13.75" translatesAutoresizingMaskIntoConstraints="NO" id="zBm-Fc-r2N" userLabel="Text Field Stack View">
+                                <rect key="frame" x="50" y="354" width="314" height="134"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hello@campfire.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-0E-nnl">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
@@ -215,8 +286,8 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xc6-rF-R6m">
-                                        <rect key="frame" x="0.0" y="75" width="314" height="60"/>
+                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xc6-rF-R6m">
+                                        <rect key="frame" x="0.0" y="74" width="314" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="xxL-V3-YpZ"/>
@@ -239,8 +310,8 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Usb-lo-SpW">
-                                <rect key="frame" x="50" y="510.5" width="314" height="60"/>
-                                <color key="backgroundColor" red="0.090196078430000007" green="0.078431372550000003" blue="0.2901960784" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <rect key="frame" x="50" y="510" width="314" height="60"/>
+                                <color key="backgroundColor" name="Jakarta"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7nO-kC-oGf"/>
                                 </constraints>
@@ -252,26 +323,34 @@
                                     <action selector="loginButtonPressed:" destination="932-yJ-Eof" eventType="touchUpInside" id="ca6-LS-GO9"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check password." textAlignment="center" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="NLV-Tk-kA2" userLabel="Notification Label">
-                                <rect key="frame" x="102" y="299.5" width="210" height="24"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <color key="textColor" red="0.090196078430000007" green="0.1333333333" blue="0.1529411765" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CampfireTuatara" translatesAutoresizingMaskIntoConstraints="NO" id="O95-DT-BBT" userLabel="Campfire Footer Image">
+                                <rect key="frame" x="169" y="696" width="76" height="96"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="76" id="BY0-RA-M9k"/>
+                                    <constraint firstAttribute="height" constant="96" id="umw-wg-e2B"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tb-WJ-ZjN"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="Usb-lo-SpW" firstAttribute="leading" secondItem="6Tb-WJ-ZjN" secondAttribute="leading" constant="50" id="52S-TV-q37"/>
                             <constraint firstItem="Usb-lo-SpW" firstAttribute="top" secondItem="zBm-Fc-r2N" secondAttribute="bottom" constant="22" id="90t-ef-v4V"/>
+                            <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="bottom" secondItem="O95-DT-BBT" secondAttribute="bottom" constant="50" id="DES-mW-mcW"/>
+                            <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="trailing" secondItem="NLV-Tk-kA2" secondAttribute="trailing" constant="50" id="IGV-Go-ve4"/>
                             <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="trailing" secondItem="zBm-Fc-r2N" secondAttribute="trailing" constant="50" id="ISC-OQ-Ee7"/>
+                            <constraint firstItem="NLV-Tk-kA2" firstAttribute="leading" secondItem="6Tb-WJ-ZjN" secondAttribute="leading" constant="50" id="LGh-Xz-Ptn"/>
+                            <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="bottom" secondItem="O95-DT-BBT" secondAttribute="bottom" constant="50" id="LWz-5x-6B0"/>
+                            <constraint firstItem="zBm-Fc-r2N" firstAttribute="top" secondItem="Phg-xW-b3A" secondAttribute="bottom" constant="110" id="NgO-0H-aqj"/>
                             <constraint firstItem="zBm-Fc-r2N" firstAttribute="leading" secondItem="6Tb-WJ-ZjN" secondAttribute="leading" constant="50" id="XbW-a3-s90"/>
                             <constraint firstItem="NLV-Tk-kA2" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="bmX-F4-xvf"/>
                             <constraint firstItem="Usb-lo-SpW" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="cS1-Gt-e5u"/>
                             <constraint firstItem="zBm-Fc-r2N" firstAttribute="centerY" secondItem="e1y-tv-lV5" secondAttribute="centerY" id="eyr-jB-ywp"/>
                             <constraint firstItem="zBm-Fc-r2N" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="p4v-IE-M75"/>
-                            <constraint firstItem="zBm-Fc-r2N" firstAttribute="top" secondItem="NLV-Tk-kA2" secondAttribute="bottom" constant="30" id="txU-Ab-K5J"/>
+                            <constraint firstItem="Phg-xW-b3A" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="pEa-d4-3Ws"/>
+                            <constraint firstItem="zBm-Fc-r2N" firstAttribute="top" secondItem="NLV-Tk-kA2" secondAttribute="bottom" constant="22" id="txU-Ab-K5J"/>
                             <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="trailing" secondItem="Usb-lo-SpW" secondAttribute="trailing" constant="50" id="y5L-V2-TuY"/>
+                            <constraint firstItem="O95-DT-BBT" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="yNv-gi-kok"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Login" id="ObK-fu-6fZ"/>
@@ -302,14 +381,14 @@
                                 <color key="sectionIndexColor" systemColor="labelColor"/>
                                 <color key="sectionIndexBackgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                             </tableView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RO-Sv-GZ3" userLabel="Lower View">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4RO-Sv-GZ3" userLabel="Compose View">
                                 <rect key="frame" x="0.0" y="722" width="414" height="120"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="456-Oj-apU">
+                                    <stackView opaque="NO" contentMode="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="456-Oj-apU" userLabel="Compose Stack View">
                                         <rect key="frame" x="20" y="30" width="374" height="60"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-Qy-L2r" userLabel="Message Field">
-                                                <rect key="frame" x="0.0" y="0.0" width="338" height="60"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-Qy-L2r" userLabel="Message Text Field">
+                                                <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="9q0-D3-ILE"/>
@@ -322,13 +401,16 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tB-tX-7gX" userLabel="Send Button">
-                                                <rect key="frame" x="348" y="0.0" width="26" height="60"/>
+                                            <button opaque="NO" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5tB-tX-7gX" userLabel="Send Button">
+                                                <rect key="frame" x="344" y="0.0" width="30" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="M19-dX-FHj"/>
+                                                </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="Jakarta"/>
                                                 <state key="normal">
-                                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                    <imageReference key="image" image="arrow.up.circle" catalog="system" symbolScale="large"/>
+                                                    <color key="titleColor" name="Jakarta"/>
+                                                    <imageReference key="image" image="paperplane.fill" catalog="system" symbolScale="large"/>
                                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                                                 </state>
                                                 <connections>
@@ -336,9 +418,6 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstItem="5tB-tX-7gX" firstAttribute="centerY" secondItem="WWe-Qy-L2r" secondAttribute="centerY" id="95f-qy-Eyu"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
@@ -363,7 +442,7 @@
                             <constraint firstItem="4RO-Sv-GZ3" firstAttribute="bottom" secondItem="bvV-ub-IuZ" secondAttribute="bottom" id="vrY-0T-kDj"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Campfire" id="qtz-by-4gl">
+                    <navigationItem key="navigationItem" title="Chat" id="qtz-by-4gl">
                         <barButtonItem key="rightBarButtonItem" title="Logout" id="I0A-jZ-dta">
                             <connections>
                                 <action selector="logOutButtonPressed:" destination="svR-Mr-HdG" id="tlN-YR-vsS"/>
@@ -379,47 +458,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="REo-Lu-SC2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2571.0144927536235" y="460.71428571428567"/>
-        </scene>
-        <!--Launch Screen View Controller-->
-        <scene sceneID="WXt-nl-N4E">
-            <objects>
-                <viewController id="7FR-sg-R8D" customClass="LaunchScreenViewController" customModule="Campfire" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="F5p-mu-LXb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hBk-fK-alb">
-                                <rect key="frame" x="111" y="303" width="192.5" height="290"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="campfire" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-Oo-K63">
-                                        <rect key="frame" x="0.0" y="0.0" width="192.5" height="211"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfR-JK-Ka1">
-                                        <rect key="frame" x="0.0" y="236" width="192.5" height="54"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <constraints>
-                                    <constraint firstItem="cfR-JK-Ka1" firstAttribute="centerX" secondItem="hBk-fK-alb" secondAttribute="centerX" id="iTr-Uj-MBq"/>
-                                </constraints>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="q7p-7r-gDh"/>
-                        <color key="backgroundColor" name="CampfireWhite"/>
-                        <constraints>
-                            <constraint firstItem="hBk-fK-alb" firstAttribute="centerX" secondItem="F5p-mu-LXb" secondAttribute="centerX" id="0Xj-Zb-Ruh"/>
-                            <constraint firstItem="hBk-fK-alb" firstAttribute="centerY" secondItem="F5p-mu-LXb" secondAttribute="centerY" id="dBm-IP-qff"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <segue destination="ClM-Ff-iov" kind="show" identifier="ToWelcome" id="tRu-Mo-SyO"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="4YU-Od-XbI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-558" y="461"/>
         </scene>
         <!--Campfire Chat-->
         <scene sceneID="l9q-R3-8IT">
@@ -449,20 +487,20 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="DGC-cf-qpa"/>
+        <segue reference="FHS-J3-Um3"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
-        <image name="arrow.up.circle" catalog="system" width="128" height="121"/>
-        <image name="campfire" width="176" height="211"/>
+        <image name="CampfireTuatara" width="176" height="211"/>
+        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <namedColor name="CampfireWhite">
-            <color red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
-        <namedColor name="Jacarta">
-            <color red="0.09072399884" green="0.07710958272" blue="0.28838098049999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <namedColor name="Jakarta">
+            <color red="0.28235294119999998" green="0.21960784310000001" blue="0.66324375449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tuatara">
-            <color red="0.14508253339999999" green="0.14118665459999999" blue="0.13331237439999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14499999582767487" green="0.14100000262260437" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
