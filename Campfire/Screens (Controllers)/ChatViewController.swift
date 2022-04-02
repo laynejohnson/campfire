@@ -9,6 +9,7 @@ import UIKit
 import Firebase
 
 // TODO: Add line above compose view
+ // TODO: Add choose avatar
 
 class ChatViewController: UIViewController {
     
@@ -22,10 +23,11 @@ class ChatViewController: UIViewController {
     
     var messages: [Message] = [
         
-        //        Message(sender: Constants.chatter1, body: "Hello friends!"),
-        //        Message(sender: Constants.chatter2, body: "Should I bring the marshmallows??"),
-        //        Message(sender: Constants.chatter1, body: "Yaaaas 👏"),
-        //        Message(sender: Constants.chatter3, body: "I've got the firewood!"),
+                Message(sender: Constants.chatter1, body: "Hi friends! 👋"),
+                Message(sender: Constants.chatter1, body: "See you soon?!"),
+                Message(sender: Constants.chatter2, body: "Yaaaas 👏"),
+                Message(sender: Constants.chatter2, body: "I'm bringing the marshmallows!! "),
+                Message(sender: Constants.chatter1, body: "I've got the firewood!"),
     ]
     
     override func viewDidLoad() {

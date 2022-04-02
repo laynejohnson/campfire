@@ -13,7 +13,6 @@
 		E827F62227F4B16B00B6D062 /* UIButton+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E827F62127F4B16B00B6D062 /* UIButton+Ext.swift */; };
 		E82FF49D2748221E00E8147F /* LaunchScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E82FF49C2748221E00E8147F /* LaunchScreenViewController.swift */; };
 		E847B73727EE308E00E3704C /* String+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B73627EE308E00E3704C /* String+Ext.swift */; };
-		E847B73927EE3CFF00E3704C /* UIViewController+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = E847B73827EE3CFF00E3704C /* UIViewController+Ext.swift */; };
 		E88CB8CB26D44C3500C0F5A1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E88CB8CA26D44C3500C0F5A1 /* GoogleService-Info.plist */; };
 		E8CDC99826B196B2004518D0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99726B196B2004518D0 /* AppDelegate.swift */; };
 		E8CDC99A26B196B2004518D0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CDC99926B196B2004518D0 /* SceneDelegate.swift */; };
@@ -37,7 +36,6 @@
 		E827F62127F4B16B00B6D062 /* UIButton+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Ext.swift"; sourceTree = "<group>"; };
 		E82FF49C2748221E00E8147F /* LaunchScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreenViewController.swift; sourceTree = "<group>"; };
 		E847B73627EE308E00E3704C /* String+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Ext.swift"; sourceTree = "<group>"; };
-		E847B73827EE3CFF00E3704C /* UIViewController+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Ext.swift"; sourceTree = "<group>"; };
 		E87B8F8726E10FA2008B185B /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		E88CB8CA26D44C3500C0F5A1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8CDC99426B196B2004518D0 /* Campfire.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Campfire.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -105,7 +103,6 @@
 			isa = PBXGroup;
 			children = (
 				E847B73627EE308E00E3704C /* String+Ext.swift */,
-				E847B73827EE3CFF00E3704C /* UIViewController+Ext.swift */,
 				E827F62127F4B16B00B6D062 /* UIButton+Ext.swift */,
 			);
 			path = Extensions;
@@ -311,7 +308,6 @@
 			files = (
 				E8CDC99C26B196B2004518D0 /* WelcomeViewController.swift in Sources */,
 				E8DDAF9126B5C6C800777A59 /* MessageCell.swift in Sources */,
-				E847B73927EE3CFF00E3704C /* UIViewController+Ext.swift in Sources */,
 				E8CDC99826B196B2004518D0 /* AppDelegate.swift in Sources */,
 				E801124926B59B5F00D0BE4B /* Message.swift in Sources */,
 				E8CDC99A26B196B2004518D0 /* SceneDelegate.swift in Sources */,
