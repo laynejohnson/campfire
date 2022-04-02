@@ -12,5 +12,5 @@
 <img src="Campfire/Assets.xcassets/Screenshots/1.imageset/1.png" alt="main screen" width="207" height="448"/> |
 <img src="Campfire/Assets.xcassets/Screenshots/2.imageset/2.png" alt="main screen" width="207" height="448"/> |
 <img src="Campfire/Assets.xcassets/Screenshots/3.imageset/3.png" alt="main screen" width="207" height="448"/> |
+<img src="Campfire/Assets.xcassets/Screenshots/4.imageset/4.png" alt="main screen" width="207" height="448"/> |
 <img src="Campfire/Assets.xcassets/Screenshots/5.imageset/5.png" alt="main screen" width="207" height="448"/> |
-<img src="Campfire/Assets.xcassets/Screenshots/6.imageset/6.png" alt="main screen" width="207" height="448"/> |
