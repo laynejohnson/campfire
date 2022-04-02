@@ -9,10 +9,6 @@ import UIKit
 import Firebase
 import FirebaseAuth
 
-// TODO: Enable return key for all text boxes
-// TODO: UI updates
-// TODO: Light/dark mode
-
 class JoinViewController: UIViewController {
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -38,7 +34,6 @@ class JoinViewController: UIViewController {
         
         // Configure UI.
         joinButton.styleButton()
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,6 +62,7 @@ class JoinViewController: UIViewController {
                     
                     // Set notification label.
                     DispatchQueue.main.async {
+                        self.notificationLabel.textColor = UIColor(named: "Tuatara")
                         self.notificationLabel.text = "Welcome to Campfire! 👋"
                     }
                     
