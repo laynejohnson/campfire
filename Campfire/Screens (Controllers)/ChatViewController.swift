@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 import Firebase
 
- // TODO: Send should scroll view to top
- // TODO: Add line above compose view
+// TODO: Send should scroll view to top
+// TODO: Add line above compose view
 
 class ChatViewController: UIViewController {
     
@@ -21,13 +21,12 @@ class ChatViewController: UIViewController {
     // Initialize database.
     let db = Firestore.firestore()
     
-    // Test messages.
     var messages: [Message] = [
         
-        Message(sender: Constants.chatter1, body: "Hello friends!"),
-        Message(sender: Constants.chatter2, body: "Should I bring the marshmallows??"),
-        Message(sender: Constants.chatter1, body: "Yaaaas 👏"),
-        Message(sender: Constants.chatter3, body: "I've got the firewood!"),
+        //        Message(sender: Constants.chatter1, body: "Hello friends!"),
+        //        Message(sender: Constants.chatter2, body: "Should I bring the marshmallows??"),
+        //        Message(sender: Constants.chatter1, body: "Yaaaas 👏"),
+        //        Message(sender: Constants.chatter3, body: "I've got the firewood!"),
     ]
     
     override func viewDidLoad() {
@@ -45,7 +44,7 @@ class ChatViewController: UIViewController {
         // Register message cell nib.
         tableView.register(UINib(nibName: Constants.cellNibName, bundle: nil), forCellReuseIdentifier: Constants.cellIdentifier)
         
-        // Retrieve messages from Firestore.
+        // Retrieve messages from Firestore db.
         loadMessages()
     }
     
@@ -77,7 +76,7 @@ class ChatViewController: UIViewController {
                                 DispatchQueue.main.async {
                                     self.tableView.reloadData()
                                     let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                                    self.tableView.scrollToRow(at: indexPath, at: .top, animated: true)
+                                    self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
                                 }
                             }
                         }
@@ -101,29 +100,32 @@ class ChatViewController: UIViewController {
         }
     }
     
-    @IBAction func sendButtonPressed(_ sender: Any) {
+    @IBAction func sendButtonPressed(_ sender: UIButton?) {
         
-        if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
-            
-            db.collection(Constants.FStore.collectionName).addDocument(data: [
-                Constants.FStore.senderField: messageSender,
-                Constants.FStore.bodyField: messageBody,
-                Constants.FStore.dateField: Date().timeIntervalSince1970
-            ]) { (error) in
-                if let e = error {
-                    print("There was a problem saving data to Firestore: \(e)")
-                    
-                } else {
-                    print("Data saved successfully")
-                    
-                   // Update UI.
-                    DispatchQueue.main.async {
-                        self.messageTextField.text = ""
-                        let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
-                        self.tableView.scrollToRow(at: indexPath, at: .bottom, animated: true)
+        if messageTextField.hasText {
+            if let messageBody = messageTextField.text, let messageSender = Auth.auth().currentUser?.email {
+                
+                db.collection(Constants.FStore.collectionName).addDocument(data: [
+                    Constants.FStore.senderField: messageSender,
+                    Constants.FStore.bodyField: messageBody,
+                    Constants.FStore.dateField: Date().timeIntervalSince1970
+                ]) { (error) in
+                    if let e = error {
+                        print("There was a problem saving data to Firestore: \(e)")
+                        
+                    } else {
+                        print("Data saved successfully")
+                        
+                        // Update UI.
+                        DispatchQueue.main.async {
+                            self.messageTextField.text = ""
+                            let indexPath = IndexPath(row: self.messages.count - 1, section: 0)
+                            self.tableView.scrollToRow(at: indexPath, at: .middle, animated: true)
+                        }
                     }
                 }
             }
+            
         }
     }
 }
@@ -165,5 +167,14 @@ extension ChatViewController: UITableViewDataSource {
 // MARK: - UITextField Extension
 
 extension ChatViewController: UITextFieldDelegate {
-
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        
+        if textField.hasText {
+            sendButtonPressed(nil)
+            return true
+        } else {
+            return false
+        }
+    }
 }
