@@ -150,13 +150,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-NU-3fv" userLabel="Campfire Label">
-                                <rect key="frame" x="92" y="179.5" width="230" height="64.5"/>
+                                <rect key="frame" x="92" y="189.5" width="230" height="64.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                 <color key="textColor" name="Tuatara"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter an email address and password to join Campfire ⛺️" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="XLj-wL-h47" userLabel="Notification Label">
-                                <rect key="frame" x="50" y="283.5" width="314" height="43"/>
+                                <rect key="frame" x="75" y="262" width="264" height="64.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.70980392156862748" green="0.3411764705882353" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -178,10 +178,11 @@
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="f1w-la-TQI" userLabel="Password Text Field">
                                         <rect key="frame" x="0.0" y="74" width="314" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <color key="tintColor" systemColor="labelColor"/>
+                                        <color key="tintColor" name="Tuatara"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="FcA-YR-0zh"/>
                                         </constraints>
+                                        <color key="textColor" name="Tuatara"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="join" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                     </textField>
@@ -223,7 +224,7 @@
                             <constraint firstItem="zN3-dR-ZaC" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="K7q-P5-fqt"/>
                             <constraint firstItem="l3X-eL-Hid" firstAttribute="leading" secondItem="Ohq-zz-5bp" secondAttribute="leading" constant="50" id="Kgu-lg-sCV"/>
                             <constraint firstItem="zK6-ne-fCH" firstAttribute="top" secondItem="l3X-eL-Hid" secondAttribute="bottom" constant="22" id="LvI-MZ-dvL"/>
-                            <constraint firstItem="XLj-wL-h47" firstAttribute="leading" secondItem="4qW-i9-KRi" secondAttribute="leading" constant="50" id="N76-Iv-pCg"/>
+                            <constraint firstItem="XLj-wL-h47" firstAttribute="leading" secondItem="4qW-i9-KRi" secondAttribute="leading" constant="75" id="N76-Iv-pCg"/>
                             <constraint firstItem="l3X-eL-Hid" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="NQR-cD-UUl"/>
                             <constraint firstItem="l3X-eL-Hid" firstAttribute="centerY" secondItem="4qW-i9-KRi" secondAttribute="centerY" id="RAh-Op-WfJ"/>
                             <constraint firstItem="Ohq-zz-5bp" firstAttribute="bottom" secondItem="zN3-dR-ZaC" secondAttribute="bottom" constant="50" id="RLQ-1t-7fl"/>
@@ -231,8 +232,8 @@
                             <constraint firstItem="XLj-wL-h47" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="XBW-fh-taK"/>
                             <constraint firstItem="l3X-eL-Hid" firstAttribute="top" secondItem="XLj-wL-h47" secondAttribute="bottom" constant="27.5" id="Z0Z-V4-Yko"/>
                             <constraint firstItem="Ohq-zz-5bp" firstAttribute="trailing" secondItem="zK6-ne-fCH" secondAttribute="trailing" constant="50" id="fYr-rf-pG1"/>
-                            <constraint firstAttribute="trailing" secondItem="XLj-wL-h47" secondAttribute="trailing" constant="50" id="hQk-ff-8ax"/>
-                            <constraint firstItem="l3X-eL-Hid" firstAttribute="top" secondItem="5Lh-NU-3fv" secondAttribute="bottom" constant="110" id="kJI-Ag-Liw"/>
+                            <constraint firstAttribute="trailing" secondItem="XLj-wL-h47" secondAttribute="trailing" constant="75" id="hQk-ff-8ax"/>
+                            <constraint firstItem="l3X-eL-Hid" firstAttribute="top" secondItem="5Lh-NU-3fv" secondAttribute="bottom" constant="100" id="kJI-Ag-Liw"/>
                             <constraint firstItem="5Lh-NU-3fv" firstAttribute="centerX" secondItem="4qW-i9-KRi" secondAttribute="centerX" id="l0K-pS-80p"/>
                         </constraints>
                     </view>
@@ -241,6 +242,8 @@
                         <outlet property="emailTextField" destination="izr-uF-MoE" id="tSD-Ib-Q3k"/>
                         <outlet property="joinButton" destination="zK6-ne-fCH" id="3kB-u2-GrK"/>
                         <outlet property="notificationLabel" destination="XLj-wL-h47" id="4Rp-bE-Fse"/>
+                        <outlet property="notificationLabelLeadingConstraint" destination="N76-Iv-pCg" id="u46-Vo-Lv3"/>
+                        <outlet property="notificationLabelTrailingConstraint" destination="hQk-ff-8ax" id="OXh-fm-weT"/>
                         <outlet property="passwordTextField" destination="f1w-la-TQI" id="PRT-JN-yXL"/>
                         <segue destination="svR-Mr-HdG" kind="show" identifier="Join" id="DGC-cf-qpa"/>
                     </connections>
@@ -258,13 +261,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phg-xW-b3A" userLabel="Campfire Label">
-                                <rect key="frame" x="92" y="179.5" width="230" height="64.5"/>
+                                <rect key="frame" x="92" y="189.5" width="230" height="64.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
                                 <color key="textColor" name="Tuatara"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please enter an email address and password to login ⛺️" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="11" translatesAutoresizingMaskIntoConstraints="NO" id="NLV-Tk-kA2" userLabel="Notification Label">
-                                <rect key="frame" x="50" y="289" width="314" height="43"/>
+                                <rect key="frame" x="75" y="289" width="264" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.70980392156862748" green="0.3411764705882353" blue="0.29803921568627451" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -275,9 +278,11 @@
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="hello@campfire.com" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Mcn-0E-nnl">
                                         <rect key="frame" x="0.0" y="0.0" width="314" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="Tuatara"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="8Xm-ue-dwT"/>
                                         </constraints>
+                                        <color key="textColor" name="Tuatara"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next" enablesReturnKeyAutomatically="YES" textContentType="email"/>
                                         <userDefinedRuntimeAttributes>
@@ -289,9 +294,11 @@
                                     <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="123456" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xc6-rF-R6m">
                                         <rect key="frame" x="0.0" y="74" width="314" height="60"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" name="Tuatara"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="xxL-V3-YpZ"/>
                                         </constraints>
+                                        <color key="textColor" name="Tuatara"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                         <textInputTraits key="textInputTraits" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
@@ -337,11 +344,11 @@
                             <constraint firstItem="Usb-lo-SpW" firstAttribute="leading" secondItem="6Tb-WJ-ZjN" secondAttribute="leading" constant="50" id="52S-TV-q37"/>
                             <constraint firstItem="Usb-lo-SpW" firstAttribute="top" secondItem="zBm-Fc-r2N" secondAttribute="bottom" constant="22" id="90t-ef-v4V"/>
                             <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="bottom" secondItem="O95-DT-BBT" secondAttribute="bottom" constant="50" id="DES-mW-mcW"/>
-                            <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="trailing" secondItem="NLV-Tk-kA2" secondAttribute="trailing" constant="50" id="IGV-Go-ve4"/>
+                            <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="trailing" secondItem="NLV-Tk-kA2" secondAttribute="trailing" constant="75" identifier="notificationLabelTrailing" id="IGV-Go-ve4"/>
                             <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="trailing" secondItem="zBm-Fc-r2N" secondAttribute="trailing" constant="50" id="ISC-OQ-Ee7"/>
-                            <constraint firstItem="NLV-Tk-kA2" firstAttribute="leading" secondItem="6Tb-WJ-ZjN" secondAttribute="leading" constant="50" id="LGh-Xz-Ptn"/>
+                            <constraint firstItem="NLV-Tk-kA2" firstAttribute="leading" secondItem="6Tb-WJ-ZjN" secondAttribute="leading" constant="75" identifier="notificationLabelLeading" id="LGh-Xz-Ptn"/>
                             <constraint firstItem="6Tb-WJ-ZjN" firstAttribute="bottom" secondItem="O95-DT-BBT" secondAttribute="bottom" constant="50" id="LWz-5x-6B0"/>
-                            <constraint firstItem="zBm-Fc-r2N" firstAttribute="top" secondItem="Phg-xW-b3A" secondAttribute="bottom" constant="110" id="NgO-0H-aqj"/>
+                            <constraint firstItem="zBm-Fc-r2N" firstAttribute="top" secondItem="Phg-xW-b3A" secondAttribute="bottom" constant="100" id="NgO-0H-aqj"/>
                             <constraint firstItem="zBm-Fc-r2N" firstAttribute="leading" secondItem="6Tb-WJ-ZjN" secondAttribute="leading" constant="50" id="XbW-a3-s90"/>
                             <constraint firstItem="NLV-Tk-kA2" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="bmX-F4-xvf"/>
                             <constraint firstItem="Usb-lo-SpW" firstAttribute="centerX" secondItem="e1y-tv-lV5" secondAttribute="centerX" id="cS1-Gt-e5u"/>
@@ -358,6 +365,8 @@
                         <outlet property="emailTextField" destination="Mcn-0E-nnl" id="XDD-Uq-J0X"/>
                         <outlet property="loginButton" destination="Usb-lo-SpW" id="4tN-3J-1cy"/>
                         <outlet property="notificationLabel" destination="NLV-Tk-kA2" id="gss-L3-BNf"/>
+                        <outlet property="notificationLabelLeading" destination="LGh-Xz-Ptn" id="M6p-mR-geL"/>
+                        <outlet property="notificationLabelTrailing" destination="IGV-Go-ve4" id="s1W-Uc-3Yd"/>
                         <outlet property="passwordTextField" destination="Xc6-rF-R6m" id="HYr-Jt-GiJ"/>
                         <segue destination="svR-Mr-HdG" kind="show" identifier="Login" id="FHS-J3-Um3"/>
                     </connections>
@@ -390,9 +399,11 @@
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Send a message..." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WWe-Qy-L2r" userLabel="Message Text Field">
                                                 <rect key="frame" x="0.0" y="0.0" width="334" height="60"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" name="Tuatara"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="60" id="9q0-D3-ILE"/>
                                                 </constraints>
+                                                <color key="textColor" name="Tuatara"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <textInputTraits key="textInputTraits" returnKeyType="send"/>
                                                 <userDefinedRuntimeAttributes>
@@ -469,11 +480,11 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="tintColor" name="Tuatara"/>
                         <color key="barTintColor" red="0.97647058819999999" green="0.97647058819999999" blue="0.97647058819999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <textAttributes key="titleTextAttributes">
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
-                            <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="textColor" name="Tuatara"/>
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -487,7 +498,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="FHS-J3-Um3"/>
+        <segue reference="DGC-cf-qpa"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" systemColor="labelColor"/>
     <resources>
@@ -497,7 +508,7 @@
             <color red="0.98000001907348633" green="0.98000001907348633" blue="0.98000001907348633" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Jakarta">
-            <color red="0.28235294119999998" green="0.21960784310000001" blue="0.66324375449999995" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.28200000524520874" green="0.2199999988079071" blue="0.66299998760223389" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Tuatara">
             <color red="0.14499999582767487" green="0.14100000262260437" blue="0.13300000131130219" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

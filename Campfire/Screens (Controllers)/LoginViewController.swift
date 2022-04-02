@@ -14,6 +14,8 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var notificationLabel: UILabel!
+    @IBOutlet weak var notificationLabelLeading: NSLayoutConstraint!
+    @IBOutlet weak var notificationLabelTrailing: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -62,6 +64,12 @@ class LoginViewController: UIViewController {
                     // Set notification label.
                     DispatchQueue.main.async {
                         self.notificationLabel.text = "Welcome back, friend! 👋"
+                        self.notificationLabel.font = .systemFont(ofSize: 30, weight: .bold)
+                        self.notificationLabel.textColor = UIColor(named: "Tuatara")
+
+                        self.notificationLabelLeading.constant = 50
+                        self.notificationLabelTrailing.constant = 50
+                        self.view.layoutIfNeeded()
                     }
                     
                     // Segue to chat view.

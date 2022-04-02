@@ -15,6 +15,8 @@ class JoinViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var joinButton: UIButton!
     @IBOutlet weak var notificationLabel: UILabel!
+    @IBOutlet weak var notificationLabelLeadingConstraint: NSLayoutConstraint!
+    @IBOutlet weak var notificationLabelTrailingConstraint: NSLayoutConstraint!
     
     
     override func viewDidLoad() {
@@ -62,8 +64,14 @@ class JoinViewController: UIViewController {
                     
                     // Set notification label.
                     DispatchQueue.main.async {
-                        self.notificationLabel.textColor = UIColor(named: "Tuatara")
                         self.notificationLabel.text = "Welcome to Campfire! 👋"
+                        self.notificationLabel.font = .systemFont(ofSize: 30, weight: .bold)
+                        self.notificationLabel.textColor = UIColor(named: "Tuatara")
+
+                        // Set label constraints.
+                        self.notificationLabelLeadingConstraint.constant = 50
+                        self.notificationLabelTrailingConstraint.constant = 50
+                        self.view.layoutIfNeeded()
                     }
                     
                     // Segue to chat view.

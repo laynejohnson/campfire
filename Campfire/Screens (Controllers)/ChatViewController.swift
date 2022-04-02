@@ -5,11 +5,9 @@
 //  Created by Layne Johnson on 7/28/21.
 //  Copyright © 2021. All rights reserved.
 
-import Foundation
 import UIKit
 import Firebase
 
-// TODO: Send should scroll view to top
 // TODO: Add line above compose view
 
 class ChatViewController: UIViewController {
@@ -17,6 +15,7 @@ class ChatViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var messageTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
+    
     
     // Initialize database.
     let db = Firestore.firestore()
@@ -135,11 +134,9 @@ class ChatViewController: UIViewController {
 extension ChatViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return messages.count
     }
     
-    // This method gets called for number messages.count
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let message = messages[indexPath.row]
