@@ -20,14 +20,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="hBk-fK-alb">
-                                <rect key="frame" x="92" y="298" width="230" height="300.5"/>
+                                <rect key="frame" x="95.5" y="298" width="223" height="300.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CampfireTuatara" translatesAutoresizingMaskIntoConstraints="NO" id="rhG-Oo-K63" userLabel="Campfire Image">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="211"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="223" height="211"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cfR-JK-Ka1" userLabel="Campfire Label">
-                                        <rect key="frame" x="0.0" y="236" width="230" height="64.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                        <rect key="frame" x="0.0" y="236" width="223" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
                                         <color key="textColor" name="Tuatara"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -61,14 +61,14 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="Bpu-uu-6Cy" userLabel="Logo Stack View">
-                                <rect key="frame" x="92" y="271" width="230" height="300.5"/>
+                                <rect key="frame" x="95.5" y="271" width="223" height="300.5"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CampfireTuatara" translatesAutoresizingMaskIntoConstraints="NO" id="fGI-0s-5hn">
-                                        <rect key="frame" x="0.0" y="0.0" width="230" height="211"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="223" height="211"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Yd-Ny-nQN">
-                                        <rect key="frame" x="0.0" y="236" width="230" height="64.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                        <rect key="frame" x="0.0" y="236" width="223" height="64.5"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
                                         <color key="textColor" name="Tuatara"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -150,8 +150,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Lh-NU-3fv" userLabel="Campfire Label">
-                                <rect key="frame" x="92" y="189.5" width="230" height="64.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <rect key="frame" x="95.5" y="189.5" width="223" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
                                 <color key="textColor" name="Tuatara"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -262,8 +262,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Campfire" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Phg-xW-b3A" userLabel="Campfire Label">
-                                <rect key="frame" x="92" y="189.5" width="230" height="64.5"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="54"/>
+                                <rect key="frame" x="95.5" y="189.5" width="223" height="64.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="54"/>
                                 <color key="textColor" name="Tuatara"/>
                                 <nil key="highlightedColor"/>
                             </label>
